@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="icon" href="image/Blahaj.png">
     </head>
-    <body>
+    <body onload="type_text()">
         <!-- ▼Overall Enclosure▼ -->
         <div id="wrapper" class="box">
             <!-- ▼Center▼ -->
@@ -61,37 +61,58 @@ Which Menu Points do i need?
                     <!-- ▲Menu▲ -->
                     <!-- ▼Main▼ -->
                     <div id="contents">
-                        <div class="overview">
-                            <h2>♥ Oooops site not found ♥</h2>
+                        <div class="not_found"
 
-                            <div class="text-content">
-                              <img src="image/content/catupdown.gif" alt="Cat Gif" />
-                              <br />
-                              Something went wrong... I guess maybe you can go back <a href="index.html">Home</a>.
-                              <br />
-                              Or maybe you wanne look at some <a href="gallery.html">Pictures</a>
-                              <br />
-                              Idk what you want or need
-                              <br />
-                              <img src="image/content/catupdown.gif" alt="Cat Gif" />
+
+                         <table style="text-align: left; width: 80%; margin-left: auto;
+                                  margin-right: auto; font-family: Helvetica,Arial,sans-serif;" border="0" cellpadding="2" cellspacing="2">
+                                <!--DWLayoutTable-->
+                                <tbody>
+                                    <tr>
+                                        <td colspan="9"><br />
+                                        </td>
+                                    </tr>
+                            
+                            
+                                </tbody>
+                            </table>
+                            <table style="font-family: Helvetica,Arial,sans-serif;" width="900" align="center" border="0" cellpadding="10"
+                                cellspacing="0">
+                            </table>
+                            <div >
+                                <img src="image/content/catupdown.gif">
+                                <img src="image/content/catupdown.gif">
+                                <img src="image/content/catupdown.gif">
+                                <br />
+                                <br />
+                                <h1>ERROR 404</h1>
+                                <br />
+                                <b>The file you requested was not found. Bummer!<br />
+                                    <br />
+                                </b>
                             </div>
-                        </div>
-                        <!--
-                        <a href="#">テキストリンク</a>はこうなりまして、<em>文章を強調</em>したり<span class="marker"
-                            >マーカー風文字</span
-                        >にしたりするとこうなりますのです。
-
-                        <h3>更新履歴</h3>
-
-                        <dl>
-                            <dt>20xx.04.01</dt>
-                            <dd>小説更新</dd>
-                            <dt>20xx.06.01</dt>
-                            <dd>小説更新</dd>
-                            <dt>20xx.10.20</dt>
-                            <dd>小説更新</dd>
-                        </dl>
-                        -->
+                            <center style="font-family: Helvetica,Arial,sans-serif;">
+                                <form> <textarea class="not_found" rows="8" cols="60" wrap="soft"></textarea> </form>
+                            </center>
+                            <div style="font-family: Helvetica,Arial,sans-serif;" align="center"><!--DWLayoutTable--></div>
+                            <table style="font-family: Helvetica,Arial,sans-serif;" width="900" align="center" border="0" cellpadding="2"
+                                cellspacing="2">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" rowspan="1" style="vertical-align: top;"><br />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br />
+                            <div style="font-family: Helvetica,Arial,sans-serif;" align="center">
+                            <img src="image/content/catupdown.gif">
+                            <img src="image/content/catupdown.gif">
+                            <img src="image/content/catupdown.gif">
+                            <br style="font-family: Helvetica,Arial,sans-serif;">
+                            <br style="font-family: Helvetica,Arial,sans-serif;">
+                            </div>
+                    </div>
                     </div>
                     <!-- ▲Main▲ -->
                 </div>
@@ -220,5 +241,6 @@ Which Menu Points do i need?
         <script src="js/jquery.height.js"></script>
         <script src="js/jquery.scroll.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="js/not_found.js"></script>
     </body>
 </html>

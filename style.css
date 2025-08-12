@@ -574,3 +574,25 @@ img{max-width:100%;height:auto}/* 画像の縮小表示 */
   width: 45%; 
   background-color: #fff1c8;
 }
+
+.not_found {
+    background-color: #313030;
+    border-radius: 10px;
+}
+
+.not_found h1 {
+  text-shadow: none;
+}
+
+.not_found div{
+    color: #f16b8e;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.not_found textarea {
+  width: 380px;
+  height: 190px;
+  background-color: rgb(59, 59, 59);
+  color: rgb(255, 255, 255);
+}

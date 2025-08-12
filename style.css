@@ -424,10 +424,9 @@ img{max-width:100%;height:auto}/* 画像の縮小表示 */
 .gallery img {
   /* (C1) DIMENSION */
   width: 100%;
-  padding: 10px;
  
   /* (C2) COLORS */
-  border: 1px solid #ddd;
+  border: 10px solid #fccef8;
   background: #fff;
  
   /* (C3) IMAGE RESIZE */

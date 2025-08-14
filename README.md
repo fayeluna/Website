@@ -23,3 +23,4 @@ To-do list
 - Easier Integration with the "Stats" --> Easier to change etc (maybe a little script)
 - Overall optimization of the page
 - Adding some winxp CSS for the Status Text Area maybe
+- Guides could be interesting

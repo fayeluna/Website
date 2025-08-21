@@ -11,7 +11,6 @@ Hiiiii :3
 To-do list
 -----------------------
 
-- Add Github link to sidebar
 - Add "Thoughts" or Blog thingie
     - Make the Navigation Image for the page
 - Try out or better the Status Text Area

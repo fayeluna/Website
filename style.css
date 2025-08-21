@@ -388,7 +388,7 @@ content
   transition-property: width, background-color;    
 }
 .progress-moved .progress-bar-book {
-  width: 10%; 
+  width: 20%; 
   background-color: #f8c8c8;
 }
 

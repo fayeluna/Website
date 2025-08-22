@@ -13,8 +13,10 @@ Background, text and settings
 
 html{
   font-size:62.5%;
-  height:100%
+  height:100%;
+  cursor: url('image/fish.ico'), default;
 }
+
 body{
   background:#57450f;
   color:#fff;

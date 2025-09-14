@@ -1,20 +1,124 @@
 <!doctype html>
 <html lang="ENG">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>----Luna's Corner of the Interwebs----</title>
-        <link rel="stylesheet" href="style.css" type="text/css" />
-        <link rel="icon" href="image/Blahaj.png">
-    </head>
-    <body>
-        <!-- ▼Overall Enclosure▼ -->
-        <div id="wrapper" class="box">
-            <!-- ▼Center▼ -->
-            <div id="main-wrap">
-                <div id="main" class="box">
-                    <!-- ▼Menuー▼ -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>----Luna's Corner of the Interwebs----</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" href="image/Blahaj.png">
+    <style type="text/css">
+        /* books.html */
+        .container-book {
+            padding-top: 20px;
+            width: 60%;
+            text-align: center;
+        }
+
+        .progress-book {
+            padding: 6px;
+            border-radius: 30px;
+            background: rgba(0, 0, 0, 0.25);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+        }
+
+        .progress-bar-book {
+            height: 18px;
+            border-radius: 30px;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+            transition: 0.4s linear;
+            transition-property: width, background-color;
+        }
+
+        .progress-moved .progress-bar-book {
+            width: 20%;
+            background-color: #f8c8c8;
+        }
+
+        ul.tab {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        ul.tab2 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border-bottom: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* tab arrangement, padding around title  */
+        ul.tab li {
+            float: top;
+            border-right: 1px solid #000000;
+        }
+
+        /* tab arrangement */
+        ul.tab2 li {
+            float: left;
+            border-right: 1px solid #ccc;
+        }
+
+        /* tab titles, padding around title */
+        ul.tab li a {
+            display: block;
+            color: lightslategray;
+            text-align: center;
+            padding: 5px 5px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 13px;
+        }
+
+        /* tab titles, size */
+        ul.tab2 li a {
+            display: block;
+            color: lightslategray;
+            text-align: center;
+            padding: 7px 7px;
+            text-decoration: none;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of links on hover */
+        ul.tab li a:hover {
+            background-color: #FFD4DF;
+        }
+
+        /* Change background color of links on hover */
+        ul.tab2 li a:hover {
+            background-color: #D4F5FF;
+        }
+
+        /* Create an active/current tablink class */
+        ul.tab li a:focus,
+        .active {
+            background-color: #FFD4DF;
+        }
+
+        /* Create an active/current tablink class */
+        ul.tab2 li a:focus,
+        .active {
+            background-color: #FFD4DF;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ▼Overall Enclosure▼ -->
+    <div id="wrapper" class="box">
+        <!-- ▼Center▼ -->
+        <div id="main-wrap">
+            <div id="main">
+                <!-- ▼Menuー▼ -->
                 <div id="menu-wrap">
                     <header>
                         <h1>
@@ -30,319 +134,336 @@
                                 <li class="box2"><a href="books.html">Books</a></li>
                                 <li class="box3"><a href="gallery.html">Gallery</a></li>
                                 <li class="box4"><a href="guestbook.html">Guestbook</a></li>
+                                <li class="box5"><a href="blog.html">Blog</a></li>
                             </ul>
                         </nav>
                     </div>
                 </div>
                 <!-- ▲Menu▲ -->
                 <!-- ▼Main▼ -->
+
                 <div id="contents">
-                    <div class="overview">
-                        <h2>Current Book I am reading:</h2>
-                        <br />
-                        <div class="text-content">
-                            I finally finished <a href="https://www.goodreads.com/book/show/11107324-the-art-of-cruelty">"The Art of Cruelty"</a>
-                            From Maggie Nelson
-                            <br />
-                            Yayyyyy
-                            <br />
-                            <br />
-                            <br />
-                            Currently I am reading <a href="https://www.goodreads.com/book/show/58548913-st-rker-als-die-angst">"Stärker als die Angst"</a>
-                            and I am reading it for therapy. But I am still deciding which other book to read on the side. Because like I can't only read this book. Blehhhh. I've read about like <b>20%-ish</b>.
-                            <div class="container-book">
-                                <div class="progress-book progress-moved">
-                                    <div class="progress-bar-book"></div>
+
+                    <ul class="tab2">
+                        <li><a href="javascript:void(0)" class="tablinks active"
+                                onclick="openCity(event, &#39;current&#39;)" id="defaultOpen">Current Book</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;list2025&#39;)">Reading List 2025</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;list2024&#39;)">Reading List 2024</a></li>
+                    </ul>
+
+                    <div id="current" class="tabcontent" style="display: block;">
+                        <div class="tabs">
+                            <h2>Current Book I am reading:</h2>
+                            <div class="text-left">
+                                <br />
+                                I finally finished <a
+                                    href="https://www.goodreads.com/book/show/11107324-the-art-of-cruelty">"The Art of
+                                    Cruelty"</a>
+                                From Maggie Nelson
+                                <br />
+                                Yayyyyy
+                                <br />
+                                Currently I am reading
+                                <a href="https://www.goodreads.com/book/show/58548913-st-rker-als-die-angst">"Stärker
+                                    als
+                                    die Angst"</a>
+                                and I am reading it for therapy. But I am still deciding which other book to read on the
+                                side. Because like I can't only read this book. Blehhhh. I've read about like
+                                <b>20%-ish</b>.
+                                <div class="container-book">
+                                    <div class="progress-book progress-moved">
+                                        <div class="progress-bar-book">meow</div>
+                                    </div>
+                                </div>
+                                <br />
+                                <center>
+                                    <img src="image/content/currentbook.jpg" alt="Book Cover" />
+                                </center>
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="list2025" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>♥ Reading List 2025 ♥</h2>
+                            <div class="text-left">
+                                <br />
+                                I like to read but sometimes it takes a lot of effort and energy to get into a book and
+                                also
+                                to "enjoy" a book. Here is a little list of all the books I've read so far in 2025. I
+                                started out super well (for me) and read like every month 1 Book. But recently my energy
+                                and
+                                motivation to read has been down. I added this site not to brag but more of a motivation
+                                for
+                                me to read more yay •⩊•.
+                                <br />
+                                <br />
+                                <div class="tables">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Book Name</th>
+                                                <th>Author</th>
+                                                <th>Genre</th>
+                                                <th>When Finished</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>On Photography</td>
+                                                <td>Susan Sontag</td>
+                                                <td>Art Criticism</td>
+                                                <td>February</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Man and his Symbols</td>
+                                                <td>Carl G. Jung</td>
+                                                <td>Psychology</td>
+                                                <td>February</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Under the Sign of Saturn</td>
+                                                <td>Susan Sontag</td>
+                                                <td>Criticism</td>
+                                                <td>March</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>The Stranger</td>
+                                                <td>Albert Camus</td>
+                                                <td>Novella</td>
+                                                <td>March</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Disappoint Me</td>
+                                                <td>Nicalo Dinan</td>
+                                                <td>Fiction</td>
+                                                <td>March</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Eyes Guts Throat Bones</td>
+                                                <td>Moïra Fowley</td>
+                                                <td>Short Stories</td>
+                                                <td>April</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Camera Lucida</td>
+                                                <td>Roland Barthes</td>
+                                                <td>Philosophy</td>
+                                                <td>April</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Regarding the Pain of Others</td>
+                                                <td>Susan Sontag</td>
+                                                <td>Art Criticism</td>
+                                                <td>May</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Ob mit Dolch, Feile oder Revolver</td>
+                                                <td>Luigi Lucheni</td>
+                                                <td>Politics / Anarchy</td>
+                                                <td>May</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>Carmilla</td>
+                                                <td>J. Sharidan Le Fanu</td>
+                                                <td>Novella</td>
+                                                <td>May</td>
+                                            </tr>
+                                            <tr>
+                                                <td>11</td>
+                                                <td>The Art of Cruelty</td>
+                                                <td>Maggie Nelson</td>
+                                                <td>Art Criticism</td>
+                                                <td>August</td>
+                                            </tr>
+                                            <tr>
+                                                <td>12</td>
+                                                <td>Stärker als die Angst</td>
+                                                <td>Heike Alsleben</td>
+                                                <td>Therapy Stuff</td>
+                                                <td>IN PROGRESS</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                            <br />
-                            <img src="image/content/currentbook.jpg" alt="Book Cover"/>
-                            <br />
-                        </div>
-                    </div>
-                    <div class="reading-list">
-                        <h2>♥ Reading List 2025 ♥</h2>
-                        <div class="text-content">
-                            I like to read but sometimes it takes a lot of effort and energy to get into a book and also to "enjoy" a book. Here is a little list of all the books I've read so far in 2025. I started out super well (for me) and read like every month 1 Book. But recently my energy and motivation to read has been down. I added this site not to brag but more of a motivation for me to read more yay •⩊•.
-                            <br />
-                            <br />
-                            <div class="tables"><table><thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Book Name</th>
-                                    <th>Author</th>
-                                    <th>Genre</th>
-                                    <th>When Finished</th>
-                                </tr></thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>On Photography</td>
-                                        <td>Susan Sontag</td>
-                                        <td>Art Criticism</td>
-                                        <td>February</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Man and his Symbols</td>
-                                        <td>Carl G. Jung</td>
-                                        <td>Psychology</td>
-                                        <td>February</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Under the Sign of Saturn</td>
-                                        <td>Susan Sontag</td>
-                                        <td>Criticism</td>
-                                        <td>March</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>The Stranger</td>
-                                        <td>Albert Camus</td>
-                                        <td>Novella</td>
-                                        <td>March</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Disappoint Me</td>
-                                        <td>Nicalo Dinan</td>
-                                        <td>Fiction</td>
-                                        <td>March</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6</td>
-                                        <td>Eyes Guts Throat Bones</td>
-                                        <td>Moïra Fowley</td>
-                                        <td>Short Stories</td>
-                                        <td>April</td>
-                                    </tr>
-                                    <tr>
-                                        <td>7</td>
-                                        <td>Camera Lucida</td>
-                                        <td>Roland Barthes</td>
-                                        <td>Philosophy</td>
-                                        <td>April</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8</td>
-                                        <td>Regarding the Pain of Others</td>
-                                        <td>Susan Sontag</td>
-                                        <td>Art Criticism</td>
-                                        <td>May</td>
-                                    </tr>
-                                    <tr>
-                                        <td>9</td>
-                                        <td>Ob mit Dolch, Feile oder Revolver</td>
-                                        <td>Luigi Lucheni</td>
-                                        <td>Politics / Anarchy</td>
-                                        <td>May</td>
-                                    </tr>
-                                    <tr>
-                                        <td>10</td>
-                                        <td>Carmilla</td>
-                                        <td>J. Sharidan Le Fanu</td>
-                                        <td>Novella</td>
-                                        <td>May</td>
-                                    </tr>
-                                    <tr>
-                                        <td>11</td>
-                                        <td>The Art of Cruelty</td>
-                                        <td>Maggie Nelson</td>
-                                        <td>Art Criticism</td>
-                                        <td>August</td>
-                                    </tr>
-                                    <tr>
-                                        <td>12</td>
-                                        <td>Stärker als die Angst</td>
-                                        <td>Heike Alsleben</td>
-                                        <td>Therapy Stuff</td>
-                                        <td>IN PROGRESS</td>
-                                    </tr>
-                                </tbody></table></div>
-                        </div>
-                        <h2>♥ Reading List 2024 ♥</h2>
-                            <div class="text-content">
-                                <div class="tables"><table><thead>
-                                  <tr>
-                                    <th></th>
-                                    <th>Book Name</th>
-                                    <th>Author</th>
-                                    <th>Genre</th>
-                                  </tr></thead>
-                                <tbody>
-                                  <tr>
-                                    <td>1</td>
-                                    <td>Girl, Interupted</td>
-                                    <td>Susanna Kaysen</td>
-                                    <td>Psychology</td>
-                                  </tr>
-                                  <tr>
-                                    <td>2</td>
-                                    <td>Everything I never told you</td>
-                                    <td>Celeste NG</td>
-                                    <td>Mystery</td>
-                                  </tr>
-                                  <tr>
-                                    <td>3</td>
-                                    <td>A Little Life</td>
-                                    <td>Hanya Yanagihara</td>
-                                    <td>Queer</td>
-                                  </tr>
-                                  <tr>
-                                    <td>4</td>
-                                    <td>Out</td>
-                                    <td>Natsuo Kirino</td>
-                                    <td>Thriller</td>
-                                  </tr>
-                                  <tr>
-                                    <td>5</td>
-                                    <td>The Picture of Dorian Grey</td>
-                                    <td>Oscar Wilde</td>
-                                    <td>Classic</td>
-                                  </tr>
-                                  <tr>
-                                    <td>6</td>
-                                    <td>The Pillars of the Earth</td>
-                                    <td>Ken Follet</td>
-                                    <td>Historical Fiction</td>
-                                  </tr>
-                                  <tr>
-                                    <td>7</td>
-                                    <td>Dracula</td>
-                                    <td>Bram Stoker</td>
-                                    <td>Classic</td>
-                                  </tr>
-                                  <tr>
-                                    <td>8</td>
-                                    <td>Territory of Light</td>
-                                    <td>Yuko Tsushima</td>
-                                    <td>Japanese Literature</td>
-                                  </tr>
-                                </tbody></table></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ▲Main▲ -->
-                </div>
-            </div>
-            <!-- ▲Center▲ -->
-            <!-- ▼Left Side▼ -->
-            <div id="left" class="box">
-                <div id="left-inner">
-                    <!-- ▼Left Side Content▼ -->
-                    <div class="block">
-                        <img class="bg-none" src="image/sidebar/banner200.gif" width="200" height="40" alt="banner" />
-                        <h3>about me</h3>
-                        <b>Creator:</b> Luna
-                        <br />
-                        <b>Age:</b> 25
-                        <br />
-                        <b>Size:</b> Reasonable
-                        <br />
-                        <b>Hobbies:</b> Being Gay, Photography, gaming, reading, painting and kissing my wife !!!
-                        <br />
-                        <br />
-                        <img class="bg-none" src="image/sidebar/yurilover.gif" width="200" alt="yurilover.gif" />
-                        <br />
-                        <br />
-                        I like a lot of different stuff. And since I am very normal I like certain things a reasonable amount.
-                        <br />
-                        <br />
-                        <div class="eye">
-                            <img class="bg-none" src="image/sidebar/The%20bleeding%20eye%20bw.png" width="200"/>
-                        </div>
-                        <h3>Stalk me here:</h3>
-                        <ul>
-                            <li><a href="https://faye.photography">Photography Website</a></li>
-                            <li><a href="https://www.instagram.com/faye_photo_/">Instagram</a></li>
-                        </ul>
-                        <br />
-                        <h3>...or contact me here:</h3>
-                        <ul>
-                            <li>Discord: yumi_uwu</li>
-                            <li>Mail:<a href="mailto:mail@faye.moe">mail@faye.moe</a></li>
-                            <li>Matrix: <a href="https://matrix.to/#/@luna_owo:tchncs.de">@luna_owo:tchncs.de</a></li>
-                            <li>Github: <a href="https://github.com/fayeluna">Luna</a></li>
-                        </ul>
-                        <br />
-                        <img class="cat-spinning" src="image/sidebar/catspin.gif" width="200"/>
-                        <br />
-                        <br />
-                        <div class="emailme">
-                            <a href="mailto:mail@faye.moe">
-                                <p class="id-1">Email</p>
-                                <p class="id-2">Me</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- ▲Left Side Content▲ -->
-                </div>
-            </div>
-            <!-- ▲Left Side▲ -->
-            <!-- ▼Right Side▼ -->
-            <div id="right" class="box">
-                <div id="right-inner">
-                    <!-- ▼Right Side Content▼ -->
-                    <div class="block">
-                        <img class="bg-none" src="image/sidebar/banner200.gif" width="200" height="40" alt="banner" />
-                        <h3>♥ Luna Stats ♥</h3>
-                        <h4>Energy</h4>
-                        <div class="container-status">
-                            <div class="energy progress-moved">
-                                <div class="energy-bar"></div>
-                            </div>
-                        </div>
-                        <br/>
-                        <h4>Inspiration</h4>
-                        <div class="container-status">
-                            <div class="inspiration progress-moved">
-                                <div class="inspiration-bar"></div>
-                            </div>
-                        </div>
-                        <br/>
-                        <h4>Happiness</h4>
-                        <div class="container-status">
-                            <div class="happiness progress-moved">
-                                <div class="happiness-bar"></div>
-                            </div>
-                        </div>
-                        <br />
-                        <h3>Special Abilities</h3>
-                        <ul>
-                            <li>Being Gay</li>
-                            <li>ADHD</li>
-                            <li>On the spectrum</li>
-                            <li>A lot of Anxiety</li>
-                        </ul>
-                        <img class="bg-none" src="image/sidebar/eye.gif" height="40" alt="eye.gif" />
-                        <br/>
-                        <h3>Updates</h3>
-<!-- Text Area -->
-<textarea rows="9" cols="20">
-2025/07/07 New Website
-2025/07/19 Status addded
-2025/07/21 Guestbook added
-2025/07/25 Books added
-2025/08/03 Gallery added
-2025/08/05 Obsessions added
-2025/08/11 404 Page Added
-</textarea>      
-                    </div>
-                    <!-- ▲Right Side Content▲ -->
-                </div>
-            </div>
-            <!-- ▲Right Side▲ -->
 
-        <a href="#" id="pagetop">▲top</a>
+                        </div>
+
+                    </div>
+                    <div id="list2024" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>♥ Reading List 2024 ♥</h2>
+                            <div class="text-left">
+                                <br />
+                                <div class="tables">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Book Name</th>
+                                                <th>Author</th>
+                                                <th>Genre</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Girl, Interupted</td>
+                                                <td>Susanna Kaysen</td>
+                                                <td>Psychology</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Everything I never told you</td>
+                                                <td>Celeste NG</td>
+                                                <td>Mystery</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>A Little Life</td>
+                                                <td>Hanya Yanagihara</td>
+                                                <td>Queer</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Out</td>
+                                                <td>Natsuo Kirino</td>
+                                                <td>Thriller</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>The Picture of Dorian Grey</td>
+                                                <td>Oscar Wilde</td>
+                                                <td>Classic</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>The Pillars of the Earth</td>
+                                                <td>Ken Follet</td>
+                                                <td>Historical Fiction</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Dracula</td>
+                                                <td>Bram Stoker</td>
+                                                <td>Classic</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Territory of Light</td>
+                                                <td>Yuko Tsushima</td>
+                                                <td>Japanese Literature</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel">
+
+                    <img src="image/buttons/autism.gif" alt="autism" />
+                    <img src="image/buttons/transwave.gif" alt="transwave" />
+                    <a href="https://neocities.org/"><img src="image/buttons/delete_twitter.gif" alt="delete twitter" /></a>
+                    <img src="image/buttons/thispuphunts.png" alt="pup" />
+                    <img src="image/buttons/transrights.png" alt="trans rights" />
+                    <a href="https://transring.neocities.org/"><img src="image/buttons/button.png" alt="button" /></a>
+                    <img src="image/buttons/transgendered.webp" alt="trans web" />
+                    <img src="image/buttons/transgender_flag.svg" alt="trans flag" />
+                    <img src="image/buttons/triplebaka.gif" alt="triplebaka" />
+                    <img src="image/buttons/transgender.gif" alt="transgender" />
+                    <img src="image/buttons/poweredbyautism.png" alt="poweredbyautism" />
+                </div>
+                <!-- ▲Main▲ -->
+            </div>
         </div>
-        <!-- ▲Overall Enclosure▲ -->
+        <!-- ▲Center▲ -->
+        <!-- ▼Left Side▼ -->
+        <div id="left" class="box">
+            <div id="left-inner">
+                <!-- ▼Left Side Content▼ -->
+                <div class="block">
+                    <img class="bg-none" src="image/sidebar/banner200.gif" width="50%" height="auto" alt="banner" />
+                    <h3>Categories</h3>
+                    <h4><a href="overview.html">Overview</a></h4>
+                    <h4><a href="index.html">Home</a></h4>
+                    <h4><a href="about.html">About me (narcissist moment)</a></h4>
+                    <h4><a href="books.html">Books</a></h4>
+                    <h4><a href="gallery.html">Gallery</a></h4>
+                    <h4><a href="guestbook.html">Guestbook</a></h4>
+                    <h4><a href="blog.html">Blog (yippie yapping)</a></h4>
+                    <h3>Webrings</h3>
+                    <script src="https://transring.neocities.org/ring.js" data-widget="cloud"></script>
+                    <br />
+                    <div id='ncring'>
+                        <script type="text/javascript"
+                            src="https://neocreatives.neocities.org/onionring-variables.js"></script>
+                        <script type="text/javascript"
+                            src="https://neocreatives.neocities.org/onionring-widget.js"></script>
+                    </div>
+                    <h3>Nerd Stuff</h3>
+                    <b>Last Updated: <span id="lastupdate"></span></b>
+                    <br />
+                    <br />
+                    <b>You are Visitor #: <span id="hitcount"></span></b>
+                    <br />
+                    <br />
+                    <a href="https://neocities.org/site/luna-uwu">---> more info here</a>
+                    <br />
+                    (it's just the neocities page)
+                    <br />
+                    <br />
+                    <textarea rows="9" cols="20" style="width: 100%;">
+2025/09/14 Finally new Design
+2025/08/11 404 Page Added
+2025/08/05 Obsessions added
+2025/08/03 Gallery added
+2025/07/25 Books added
+2025/07/21 Guestbook added
+2025/07/19 Status addded
+2025/07/07 New Website
+</textarea>
+                    Changelog Site <a href="changelog.html">!! HERE !!</a>
+                    <div class="emailme">
+                        <a href="mailto:mail@faye.moe">
+                            <p class="id-1">Email</p>
+                            <p class="id-2">Me</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- ▲Left Side Content▲ -->
+            </div>
+        </div>
+        <!-- ▲Left Side▲ -->
+        <a href="#" id="pagetop">▲top</a>
+    </div>
+    <!-- ▲Overall Enclosure▲ -->
 
-        <!-- Scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="js/jquery.height.js"></script>
-        <script src="js/jquery.scroll.js"></script>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <script src="js/oneko.js"></script>
-    </body>
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery.scroll.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/oneko.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/neocities.js"></script>
+</body>
+
 </html>

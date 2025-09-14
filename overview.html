@@ -8,54 +8,53 @@
     <title>----Luna's Corner of the Interwebs----</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="icon" href="image/Blahaj.png">
-    <script src="js/gallery.js"></script>
     <style type="text/css">
-        /* gallery.html */
-        
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            /* 3 images per row */
-            grid-gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
+        /* overview.html */
+
+        #overview {
+            margin: 0 10px 10px 10px;
         }
 
-        .tables {
-            max-width: 33%;
-            width: 650px;
+        .logo {
+            display: block;
+            margin-bottom: 40px !important;
+            float: left;
+            margin: 11px;
+            width: 200px;
+            height: 220px;
+            position: relative;
         }
 
-        .gallery img {
-            width: 100%;
-            border: 10px solid #fccef8;
-            background: #fff;
-            object-fit: cover;
+        .logo a {
+            border-bottom: none;
         }
 
-        .gallery img:hover {
-            /* (E) OPTIONAL ZOOM ON HOVER */
-            z-index: 9;
-            transform: scale(1.05);
-            transition: transform ease 0.5s;
+        .logo img {
+            width: 200px;
+            position: relative;
+            height: 100%;
         }
 
-        .gallery img.full {
-            /* (F) FULLSCREEN MODE */
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            width: 100vw;
-            height: 100vh;
-            object-fit: contain;
-            background: rgba(0, 0, 0, 0.7);
+        z {
+            /* image hover*/
         }
 
-        .gallery img.full:hover {
-            z-index: 999;
-            transform: none;
+        z span {
+            display: none;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            height: auto;
+            transition: .9s ease;
+        }
+
+        z:hover span {
+            /* hover text color*/
+            color: grey;
+            display: block;
         }
     </style>
 </head>
@@ -65,7 +64,7 @@
     <div id="wrapper" class="box">
         <!-- ▼Center▼ -->
         <div id="main-wrap">
-            <div id="main">
+            <div id="main" class="box">
                 <!-- ▼Menuー▼ -->
                 <div id="menu-wrap">
                     <header>
@@ -93,54 +92,67 @@
 
                     <ul class="tab2">
                         <li><a href="javascript:void(0)" class="tablinks active"
-                                onclick="openCity(event, &#39;procreate&#39;)" id="defaultOpen">Procreate stuff</a></li>
-                        <li><a href="javascript:void(0)" class="tablinks"
-                                onclick="openCity(event, &#39;pano&#39;)">120 Panorama</a></li>
+                                onclick="openCity(event, &#39;overview&#39;)" id="defaultOpen">Overview</a></li>
                     </ul>
 
-                    <div id="procreate" class="tabcontent" style="display: block;">
-                        <div class="tabs">
-                            <h2>Drawings and other random stuff from Procreate</h2>
-                            <div class="gallery">
-                                <img src="image/gallery/Bats-min.png" title="Bats" />
-                                <img src="image/gallery/Blahaj_my_beloved-min.png" title="Blahaj my beloved" />
-                                <img src="image/gallery/Blahaj-min.png" title="Blahaj" />
-                                <img src="image/gallery/Body-min.png" title="Body" />
-                                <img src="image/gallery/Cat-Thing-min.png" title="Cat Thing" />
-                                <img src="image/gallery/Dream_1_5-min.png" title="Dream 1.5" />
-                                <img src="image/gallery/Dream_2-min.png" title="Dream 2" />
-                                <img src="image/gallery/onigiri-min.png" title="Onigiri" />
-                                <img src="image/gallery/Hand-min.png" title="Hand" />
-                                <img src="image/gallery/Plakat_Abschlussfest-min.png" title="Plakat Abschlussfest" />
-                                <img src="image/gallery/Tattoo-min.png" title="Tattoo" />
-                                <img src="image/gallery/Window-min.png" title="Window" />
-                                <img src="image/gallery/Wolf-min.png" title="Wolf" />
-                            </div>
-                        </div>
-                    </div>
+                    <div id="overview" class="tabcontent" style="display: block;">
+                        <h3>Pick one</h3>
 
-                    <div id="pano" class="tabcontent" style="display: none;">
-                        <div class="tabs">
-                            <h2>♥ 120 Panorama ♥</h2>
-                            <div class="text-left">
-                                These Pictures were made with my RZ-67 and some 35mm Film in the big Film loaders.
-                                The only downside to this is that you "waste" a lot of film. But the image covers the
-                                whole negative which looks quite nice.
-                            </div>
-                            <br />
-                            <div class="gallery">
-                                <img src="image/gallery/1.jpg" title="Panoramo 1" />
-                                <img src="image/gallery/2.jpg" title="Panoramo 2" />
-                            </div>
+                        <div class="logo">
+                            <z><a href="about.html">
+                                    <img src="image/overview/aboutme.JPG" />
+                                    <span><img src="image/sidebar/catspin.gif" style="background: none"></span>
+                            </z>
+                            About me</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="books.html">
+                                    <img src="image/overview/books.JPG" />
+                                    <span><img src="image/sidebar/catspin.gif" style="background: none"></span>
+                            </z>
+                            Books and stuff</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="gallery.html">
+                                    <img src="image/overview/gallery.jpg" />
+                                    <span><img src="image/sidebar/catspin.gif" style="background: none"></span>
+                            </z>
+                            Pictures and Stuff</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="guestbook.html">
+                                    <img src="image/overview/guestbook.JPG" />
+                                    <span><img src="image/sidebar/catspin.gif" style="background: none"></span>
+                            </z>
+                            Guestbook</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="blog.html">
+                                    <img src="image/overview/blog.jpg" />
+                                    <span><img src="image/sidebar/catspin.gif" style="background: none"></span>
+                            </z>
+                            Yip Yap (Blog)</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="changelog.html">
+                                    <img src="image/overview/changelog.jpg" />
+                                    <span><img src="image/sidebar/catspin.gif" style="background: none"></span>
+                            </z>
+                            Changelog</a>
                         </div>
                     </div>
                 </div>
-
                 <div class="carousel">
 
                     <img src="image/buttons/autism.gif" alt="autism" />
                     <img src="image/buttons/transwave.gif" alt="transwave" />
-                    <a href="https://neocities.org/"><img src="image/buttons/delete_twitter.gif" alt="delete twitter" /></a>
+                    <a href="https://neocities.org/"><img src="image/buttons/delete_twitter.gif"
+                            alt="delete twitter" /></a>
                     <img src="image/buttons/thispuphunts.png" alt="pup" />
                     <img src="image/buttons/transrights.png" alt="trans rights" />
                     <a href="https://transring.neocities.org/"><img src="image/buttons/button.png" alt="button" /></a>

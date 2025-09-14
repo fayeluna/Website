@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ENG">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>----Luna's Corner of the Interwebs----</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" href="image/Blahaj.png">
+    <style type="text/css">
+        /* index.html */
+        .contents {
+            height: 50%;
+            overflow: scroll;
+        }
+
+        table {
+            color: #57450f; /* why do I have to set this here I have no clue */
+        }
+
+        #obsessions {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-gap: 20px;
+        }
+
+        #obsessions a {
+            padding: 10px;
+        }
+
+        #obsessions img {
+            width: 50%;
+        }
+
+        .container-status {
+            padding-top: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .energy,
+        .inspiration,
+        .happiness {
+            padding: 6px;
+            border-radius: 30px;
+            background: rgba(0, 0, 0, 0.25);
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+        }
+
+        .energy-bar,
+        .inspiration-bar,
+        .happiness-bar {
+            height: 18px;
+            border-radius: 30px;
+            background-image:
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+            transition: 0.4s linear;
+            transition-property: width, background-color;
+        }
+
+        .progress-moved .energy-bar {
+            width: 15%;
+            background-color: #fff1c8;
+        }
+
+        .progress-moved .inspiration-bar {
+            width: 50%;
+            background-color: #fff1c8;
+        }
+
+        .progress-moved .happiness-bar {
+            width: 25%;
+            background-color: #fff1c8;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ▼Overall Enclosure▼ -->
+    <div id="wrapper" class="box">
+        <!-- ▼Center▼ -->
+        <div id="main-wrap">
+            <div id="main">
+                <!-- ▼Menuー▼ -->
+                <div id="menu-wrap">
+                    <header>
+                        <h1>
+                            <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
+                            <a href="index.html">Luna's Corner</a>
+                            <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
+                        </h1>
+                    </header>
+                    <div id="menu">
+                        <nav>
+                            <ul>
+                                <li class="box1"><a href="index.html">Home</a></li>
+                                <li class="box2"><a href="books.html">Books</a></li>
+                                <li class="box3"><a href="gallery.html">Gallery</a></li>
+                                <li class="box4"><a href="guestbook.html">Guestbook</a></li>
+                                <li class="box5"><a href="blog.html">Blog</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- ▲Menu▲ -->
+                <!-- ▼Main▼ -->
+                <div id="contents">
+
+                    <ul class="tab2">
+                        <li><a href="javascript:void(0)" class="tablinks active"
+                                onclick="openCity(event, &#39;about&#39;)" id="defaultOpen">Profile</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;obsessions&#39;)">Obsessions</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;stats&#39;)">Stats</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, &#39;links&#39;)">How
+                                to Contact me:</a></li>
+                    </ul>
+
+                    <div id="about" class="tabcontent" style="display: block;">
+                        <div class="tabs">
+                            <h2>♥ Meeeeeee ♥</h2>
+                            <div class="text-center">
+                                <img src="image/content/breakdance.gif" height="5%"
+                                    alt="funny gif of a cat Breakdancing" />
+                                Hii ♥ and welcome to my little corner of this "series of tubes"。
+                                <img src="image/content/breakdance.gif" height="5%"
+                                    alt="funny gif of a cat Breakdancing" />
+                                <br />
+                                <br />
+                                I am Luna a <b>weird thing</b> that is currently <b>25</b> years old. I am intrested in
+                                Art and Photography and this is my little website.
+                                <br />
+                                The Reason this websites exists is to just create without hesitation. I want to be able
+                                to document and have a safe space on the interwebs.
+                                <br />
+                                <br />
+                                <h3>Details</h3>
+                                <b>Creator:</b> Luna
+                                <br />
+                                <b>Age:</b> 25
+                                <br />
+                                <b>Size:</b> Reasonable
+                                <br />
+                                <b>Hobbies:</b> Being Gay, Photography, gaming, reading, painting and kissing girls !!!
+                                <br />
+                                <br />
+                                <img class="bg-none" src="image/sidebar/yurilover.gif" width="200"
+                                    alt="yurilover.gif" />
+                                <br />
+                                <br />
+                                <div class="text-left">
+                                    I also like older or weird-ish movies. Such as
+                                    <a href="https://www.imdb.com/title/tt0057012/?ref_=ext_shr_lnk">Dr.Strangelove or:
+                                        How I learned to Stop Worrying and
+                                        Love the Bomb</a>
+                                    or
+                                    <a href="https://www.imdb.com/title/tt0076162/?ref_=ext_shr_lnk">House</a>
+                                    (not the medical show with the Dr.House altough that one I also watched and it's
+                                    pretty okai)
+                                    are some of my favourite movies.
+                                    <br />
+                                    Maybe it would be cool to yap about movies someday (when I find the energy to do
+                                    so). But here is the link to <a href="https://trakt.tv/users/nanka">my Trakt</a>.
+                                    Where it basically tracks all the stuff I watch (As of Sep.2025
+                                    currently watching The good Doctor).
+                                    As you can see I really like Stats and stuff that's why I also use <a
+                                        href="https://www.last.fm/user/yumi__uwu_">Last.FM</a>. Last.fm is also a very
+                                    cool service where you can see a lot
+                                    of details and what genres and stuff you listen to (<b>WARNING:</b> I am very cringe
+                                    and listen to very cringe music but
+                                    that's okai :3).
+                                    <br />
+                                    <br />
+                                    I like a lot of different stuff. And since I am very normal I like certain things a
+                                    reasonable
+                                    amount. For example for the last year or so I have been pretty invested with
+                                    performance art and would really also like to do my own performance art. I actually
+                                    have already a rough Idea of what I want to do but it's still very much in planning.
+                                    I will prob make a page about it when I first present it somewhere.
+                                    The plan is also to continue to study further after I finish my studies in
+                                    photography. Maybe Fine Art would be cool or something else (I haven't really
+                                    decided yet...).
+                                </div>
+                                <br />
+                                <br />
+                                <h4>Special Abilities</h4>
+                                <ul>
+                                    <li>Being Gay</li>
+                                    <li>ADHD</li>
+                                    <li>On the spectrum</li>
+                                    <li>A lot of Anxiety</li>
+                                </ul>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                                <b>Site will always be under construction sowwy ♥♥♥</b>
+                                <br />
+                                <br />
+                                <img class="bg-none" src="image/sidebar/eye.gif" height="40" alt="eye.gif" />
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="obsessions" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>Here are my current obsessions</h2>
+                            <div class="text-center">
+                                <br />
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>This Website</th>
+                                            <th>Linux OpenSuse</th>
+                                            <th>Linux Stuff</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="tables">
+                                                Still working on this website. Currently working on a new Design. I
+                                                guess
+                                                here
+                                                is a bit of a preview. It is very much still very unfinished. School has
+                                                also
+                                                started again so it's been pretty stressful.
+                                                <br />
+                                                <br />
+                                                <img src="image/content/preview.png" title="New Design" />
+                                            </td>
+                                            <td class="tables">
+                                                I basically got a new "old" Laptop. A Lenovo T450s !!! It's super cool
+                                                and I
+                                                installed OpenSuse on it and i've been just trying to learn and do stuff
+                                                with my
+                                                laptop (I also put many many stickers on it yay).
+                                                <br />
+                                                <br />
+                                                <img src="image/content/laptop.jpg" title="Laptop" />
+                                            </td>
+                                            <td class="tables">
+                                                Hiiii, So I started like 2 weeks ago to completly switch to linux.
+                                                <br />
+                                                And it has been a lot of work. I went and installed Arch Linux with
+                                                hyprland.
+                                                <br />
+                                                This has defintive been a leanring experince. I've had so funny and
+                                                goofy
+                                                problems: I couldnt' use copy and paste for a while.
+                                                <br />
+                                                This is how my application menu starter thing looks like (yay turtles :3
+                                                ):
+                                                <br />
+                                                <br />
+                                                <img src="image/content/rofi.png" title="Rofi" />
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="stats" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>More stats and stuff</h2>
+                            <div class="text-left">
+                                <br />
+                                <h4>Energy</h4>
+                                <div class="container-status">
+                                    <div class="energy progress-moved">
+                                        <div class="energy-bar">15%</div>
+                                    </div>
+                                </div>
+                                <small>(It's just an e-energy issue)</small>
+                                <br />
+                                <br />
+                                <h4>Inspiration</h4>
+                                <div class="container-status">
+                                    <div class="inspiration progress-moved">
+                                        <div class="inspiration-bar">50%</div>
+                                    </div>
+                                </div>
+                                <br />
+                                <h4>Happiness</h4>
+                                <div class="container-status">
+                                    <div class="happiness progress-moved">
+                                        <div class="happiness-bar">25%</div>
+                                    </div>
+                                </div>
+                                <br />
+                                Honestly I haven't been feeling the greatest overall. And recently due to (more) bad
+                                news it has been tough to motivate myself or literally to do anything. I am currently
+                                really struggling with going to school again. A Issue I thought I solved but it kept
+                                getting worse again because of self-identity issues and social anxiety. But that's okai.
+                                I am really looking forward when this school year is over and I get a break from I
+                                guess... Everything.
+                                <br />
+                                But I guess fake it till you make it !!!
+                                <br />
+                                <center>
+                                    <img class="cat-spinning" src="image/sidebar/catspin.gif" width="200" />
+                                </center>
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="links" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>Links</h2>
+                            <div class="text-left">
+                                <br />
+                                It always makes me so happy when I get a message regarding my website. Recently someone sent me an E-Mail and it just means so much to me when someone takes time out of their day to write me (I wouldn't know why you would waste time and write me but still).
+                                <br />
+                                Since I am somewhat socially akward and forgets stuff a lot. Please have some patience with answers of Emails or any other Form of contact. Sorrryyyyy :3
+                            </div>
+                            <div class="text-center">
+                                <h3>Stalk me here:</h3>
+                                <ul>
+                                    <li><a href="https://faye.photography">Photography Website</a></li>
+                                    <li><a href="https://www.instagram.com/faye_photo_/">Instagram</a></li>
+                                </ul>
+                                <br />
+                                <h3>...or contact me here:</h3>
+                                <ul>
+                                    <li>Discord: yumi_uwu</li>
+                                    <li>Mail:<a href="mailto:mail@faye.moe">mail@faye.moe</a></li>
+                                    <li>Github: <a href="https://github.com/fayeluna">Luna</a></li>
+                                </ul>
+                                <br />
+                                <img class="bg-none" src="image/sidebar/The%20bleeding%20eye%20bw.png" width="200" />
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel">
+
+                    <img src="image/buttons/autism.gif" alt="autism" />
+                    <img src="image/buttons/transwave.gif" alt="transwave" />
+                    <a href="https://neocities.org/"><img src="image/buttons/delete_twitter.gif" alt="delete twitter" /></a>
+                    <img src="image/buttons/thispuphunts.png" alt="pup" />
+                    <img src="image/buttons/transrights.png" alt="trans rights" />
+                    <a href="https://transring.neocities.org/"><img src="image/buttons/button.png" alt="button" /></a>
+                    <img src="image/buttons/transgendered.webp" alt="trans web" />
+                    <img src="image/buttons/transgender_flag.svg" alt="trans flag" />
+                    <img src="image/buttons/triplebaka.gif" alt="triplebaka" />
+                    <img src="image/buttons/transgender.gif" alt="transgender" />
+                    <img src="image/buttons/poweredbyautism.png" alt="poweredbyautism" />
+                </div>
+                <!-- ▲Main▲ -->
+            </div>
+        </div>
+        <!-- ▲Center▲ -->
+        <!-- ▼Left Side▼ -->
+        <div id="left" class="box">
+            <div id="left-inner">
+                <!-- ▼Left Side Content▼ -->
+                <div class="block">
+                    <img class="bg-none" src="image/sidebar/banner200.gif" width="50%" height="auto" alt="banner" />
+                    <h3>Categories</h3>
+                    <h4><a href="overview.html">Overview</a></h4>
+                    <h4><a href="index.html">Home</a></h4>
+                    <h4><a href="about.html">About me (narcissist moment)</a></h4>
+                    <h4><a href="books.html">Books</a></h4>
+                    <h4><a href="gallery.html">Gallery</a></h4>
+                    <h4><a href="guestbook.html">Guestbook</a></h4>
+                    <h4><a href="blog.html">Blog (yippie yapping)</a></h4>
+                    <h3>Webrings</h3>
+                    <script src="https://transring.neocities.org/ring.js" data-widget="cloud"></script>
+                    <br />
+                    <div id='ncring'>
+                        <script type="text/javascript"
+                            src="https://neocreatives.neocities.org/onionring-variables.js"></script>
+                        <script type="text/javascript"
+                            src="https://neocreatives.neocities.org/onionring-widget.js"></script>
+                    </div>
+                    <h3>Nerd Stuff</h3>
+                    <b>Last Updated: <span id="lastupdate"></span></b>
+                    <br />
+                    <br />
+                    <b>You are Visitor #: <span id="hitcount"></span></b>
+                    <br />
+                    <br />
+                    <a href="https://neocities.org/site/luna-uwu">---> more info here</a>
+                    <br />
+                    (it's just the neocities page)
+                    <br />
+                    <br />
+                    <textarea rows="9" cols="20" style="width: 100%;">
+2025/09/14 Finally new Design
+2025/08/11 404 Page Added
+2025/08/05 Obsessions added
+2025/08/03 Gallery added
+2025/07/25 Books added
+2025/07/21 Guestbook added
+2025/07/19 Status addded
+2025/07/07 New Website
+</textarea>
+                    Changelog Site <a href="changelog.html">!! HERE !!</a>
+                    <div class="emailme">
+                        <a href="mailto:mail@faye.moe">
+                            <p class="id-1">Email</p>
+                            <p class="id-2">Me</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- ▲Left Side Content▲ -->
+            </div>
+        </div>
+        <!-- ▲Left Side▲ -->
+        <a href="#" id="pagetop">▲top</a>
+    </div>
+    <!-- ▲Overall Enclosure▲ -->
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery.scroll.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/oneko.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/neocities.js"></script>
+</body>
+
+</html>

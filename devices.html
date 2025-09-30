@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ENG">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>----Luna's Corner of the Interwebs----</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="icon" href="image/Blahaj.png">
+    <style type="text/css">
+        /* devices.html */
+
+        #overview {
+            margin: 0 10px 10px 10px;
+        }
+
+        .logo {
+            display: block;
+            margin-bottom: 40px !important;
+            float: left;
+            margin: 11px;
+            width: 200px;
+            height: 220px;
+            position: relative;
+        }
+
+        .logo a {
+            border-bottom: none;
+        }
+
+        .logo img {
+            /* image has to be a square */
+            width: auto;
+            position: relative;
+            height: 200px;
+        }
+
+        z {
+            /* image hover*/
+        }
+
+        z span {
+            display: none;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            height: auto;
+            transition: .9s ease;
+        }
+
+        z:hover span {
+            /* hover text color*/
+            color: grey;
+            display: block;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            /* 3 images per row */
+            grid-gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .tables {
+            max-width: 33%;
+            width: 650px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border: 10px solid #fccef8;
+            background: #fff;
+            object-fit: cover;
+        }
+
+        .gallery img:hover {
+            /* (E) OPTIONAL ZOOM ON HOVER */
+            z-index: 9;
+            transform: scale(1.05);
+            transition: transform ease 0.5s;
+        }
+
+        .gallery img.full {
+            /* (F) FULLSCREEN MODE */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery img.full:hover {
+            z-index: 999;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ▼Overall Enclosure▼ -->
+    <div id="wrapper" class="box">
+        <!-- ▼Center▼ -->
+        <div id="main-wrap">
+            <div id="main" class="box">
+                <!-- ▼Menuー▼ -->
+                <div id="menu-wrap">
+                    <header>
+                        <h1>
+                            <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
+                            <a href="index.html">Luna's Corner</a>
+                            <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
+                        </h1>
+                    </header>
+                    <div id="menu">
+                        <nav>
+                            <ul>
+                                <li class="box1"><a href="index.html">Home</a></li>
+                                <li class="box2"><a href="books.html">Books</a></li>
+                                <li class="box3"><a href="gallery.html">Gallery</a></li>
+                                <li class="box4"><a href="guestbook.html">Guestbook</a></li>
+                                <li class="box5"><a href="blog.html">Blog</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- ▲Menu▲ -->
+                <!-- ▼Main▼ -->
+                <div id="contents">
+
+                    <ul class="tab2">
+                        <li><a href="javascript:void(0)" class="tablinks active"
+                                onclick="openCity(event, &#39;overview&#39;)" id="defaultOpen">Overview</a></li>
+
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;ipod&#39;)">Ipod</a></li>
+
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;flipphone&#39;)">Flip Phone</a></li>
+
+                        <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, &#39;psvita&#39;)">PS
+                                Vita</a></li>
+
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;ipad&#39;)">Ipad</a></li>
+
+
+                    </ul>
+
+                    <div id="overview" class="tabcontent" style="display: block;">
+                        <h3>Pick one or don't I am not your dad or your mom I am just random person on the Internet</h3>
+
+                        <div class="logo">
+                            <z><a href="javascript:void(0)" onclick="openCity(event, &#39;ipod&#39;)">
+                                    <img src="image/devices/ipod_classic.png" />
+                            </z>
+                            Ipod Classic</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="javascript:void(0)" onclick="openCity(event, &#39;flipphone&#39;)">
+                                    <img src="image/devices/Flip_phone.png" />
+                            </z>
+                            Samsung Galaxy Folder 2</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="javascript:void(0)" onclick="openCity(event, &#39;psvita&#39;)">
+                                    <img src="image/devices/PSP_Vita.png" />
+                            </z>
+                            PSP Vita</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="javascript:void(0)" onclick="openCity(event, &#39;ipad&#39;)">
+                                    <img src="image/devices/ipad.png" />
+                            </z>
+                            Ipad -- where I draw stuff sometimes</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="cameras.html">
+                                    <img src="image/devices/cameras combined.png" />
+                            </z>
+                            My different cameras</a>
+                        </div>
+
+                    </div>
+                    <div id="ipod" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>♥ Ipod Classic 6th generation ♥</h2>
+                            <div class="text-left">
+                                I flipping love my Ipod. I am trying to have one device for one function.
+                                The only thing that sucks is that I currently always have to boot to my Windows PC so I
+                                can start Itunes and that is just a huge pain in the ass.
+                                I have to prob load a different firmware on it but I haven't gotten around to doing
+                                that. But I heard it isnt' that hard so yay.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="flipphone" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>♥ Samsung Galaxy Folder 2 ♥</h2>
+                            <div class="text-left">
+                                That's my current Phone and it still has Android and it kinda sucks. It always loses
+                                connection randomly and I can type very slowly. But I don't mind. It keeps me off the
+                                phone and in an emergency it's enough I can call or text someone if I need to. And Maps
+                                also works on it so yay.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="psvita" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>♥ PS Vita ♥</h2>
+                            <div class="text-left">
+                                It's my partner's PSVita from their childhood. And it's modded and I'm currently playing
+                                Persona 3 on it. It's pretty epic. I really like the story so far. The dungeon exploring
+                                I think personally gets a bit repetive but that's okai.
+                                <br/>
+                                <br/>
+                                After I appearantly have to play Persona 4 Golden or something. I was originally planning to play that first but I started the wrong game and so I've just decided to play Persona 3 first. Ooopsie
+                            </div>
+                            <center>
+                            <img src="image/devices/persona3.jpg" height="300px">
+                            </center>
+                        </div>
+                    </div>
+
+                    <div id="ipad" class="tabcontent" style="display: block;">
+                        <div class="tabs">
+                            <h2>Drawings and other random stuff from Procreate</h2>
+                            <div class="text-left">
+                                I am quite shitty at drawing but it's pretty fun. So yay I suppose. I started drawing on
+                                my Ipad like 1-2 years ago (I don't remember time is not real.)
+                            </div>
+                            <div class="gallery">
+                                <img src="image/gallery/procreate/Bats-min.png" title="Bats" />
+                                <img src="image/gallery/procreate/Blahaj_my_beloved-min.png" title="Blahaj my beloved" />
+                                <img src="image/gallery/procreate/Blahaj-min.png" title="Blahaj" />
+                                <img src="image/gallery/procreate/Body-min.png" title="Body" />
+                                <img src="image/gallery/procreate/Cat-Thing-min.png" title="Cat Thing" />
+                                <img src="image/gallery/procreate/Dream_1_5-min.png" title="Dream 1.5" />
+                                <img src="image/gallery/procreate/Dream_2-min.png" title="Dream 2" />
+                                <img src="image/gallery/procreate/onigiri-min.png" title="Onigiri" />
+                                <img src="image/gallery/procreate/Hand-min.png" title="Hand" />
+                                <img src="image/gallery/procreate/Plakat_Abschlussfest-min.png" title="Plakat Abschlussfest" />
+                                <img src="image/gallery/procreate/Tattoo-min.png" title="Tattoo" />
+                                <img src="image/gallery/procreate/Window-min.png" title="Window" />
+                                <img src="image/gallery/procreate/Wolf-min.png" title="Wolf" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="carousel">
+                    <!--only up to 6 per carousel-->
+                    <img src="image/buttons/autism.gif" alt="autism" />
+                    <img src="image/buttons/transwave.gif" alt="transwave" />
+                    <a href="https://neocities.org/"><img src="image/buttons/delete_twitter.gif"
+                            alt="delete twitter" /></a>
+                    <img src="image/buttons/thispuphunts.png" alt="pup" />
+                    <img src="image/buttons/transrights.png" alt="trans rights" />
+                    <a href="https://transring.neocities.org/"><img src="image/buttons/button.png" alt="button" /></a>
+                </div>
+                <div class="carousel">
+                    <!--only up to 6 per carousel-->
+                    <img src="image/buttons/transgendered.webp" alt="trans web" />
+                    <img src="image/buttons/transgender_flag.svg" alt="trans flag" />
+                    <img src="image/buttons/triplebaka.gif" alt="triplebaka" />
+                    <img src="image/buttons/transgender.gif" alt="transgender" />
+                    <img src="image/buttons/poweredbyautism.png" alt="poweredbyautism" />
+                </div>
+                <!-- ▲Main▲ -->
+            </div>
+        </div>
+        <!-- ▲Center▲ -->
+        <!-- ▼Left Side▼ -->
+        <div id="left" class="box">
+            <div id="left-inner">
+                <!-- ▼Left Side Content▼ -->
+                <div class="block">
+                    <img class="bg-none" src="image/sidebar/banner200.gif" width="50%" height="auto" alt="banner" />
+                    <h3>Categories</h3>
+                    <h4><a href="overview.html">Overview</a></h4>
+                    <h4><a href="index.html">Home</a></h4>
+                    <h4><a href="about.html">About me (narcissist moment)</a></h4>
+                    <h4><a href="books.html">Books</a></h4>
+                    <h4><a href="gallery.html">Gallery</a></h4>
+                    <h4><a href="guestbook.html">Guestbook</a></h4>
+                    <h4><a href="blog.html">Blog (yippie yapping)</a></h4>
+                    <h3>Webrings</h3>
+                    <script src="https://transring.neocities.org/ring.js" data-widget="cloud"></script>
+                    <br />
+                    <div id='ncring'>
+                        <script type="text/javascript"
+                            src="https://neocreatives.neocities.org/onionring-variables.js"></script>
+                        <script type="text/javascript"
+                            src="https://neocreatives.neocities.org/onionring-widget.js"></script>
+                    </div>
+                    <h3>Nerd Stuff</h3>
+                    <b>Last Updated: <span id="lastupdate"></span></b>
+                    <br />
+                    <br />
+                    <b>You are Visitor #: <span id="hitcount"></span></b>
+                    <br />
+                    <br />
+                    <a href="https://neocities.org/site/luna-uwu">---> more info here</a>
+                    <br />
+                    (it's just the neocities page)
+                    <br />
+                    <br />
+                    <textarea rows="9" cols="20" style="width: 100%;">
+2025/09/14 Finally new Design
+2025/08/11 404 Page Added
+2025/08/05 Obsessions added
+2025/08/03 Gallery added
+2025/07/25 Books added
+2025/07/21 Guestbook added
+2025/07/19 Status addded
+2025/07/07 New Website
+</textarea>
+                    Changelog Site <a href="changelog.html">!! HERE !!</a>
+                    <div class="emailme">
+                        <a href="mailto:mail@faye.moe">
+                            <p class="id-1">Email</p>
+                            <p class="id-2">Me</p>
+                        </a>
+                    </div>
+                </div>
+                <!-- ▲Left Side Content▲ -->
+            </div>
+        </div>
+        <!-- ▲Left Side▲ -->
+        <a href="#" id="pagetop">▲top</a>
+    </div>
+    <!-- ▲Overall Enclosure▲ -->
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery.scroll.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/oneko.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/neocities.js"></script>
+</body>
+
+</html>

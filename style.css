@@ -249,6 +249,11 @@ header a {
   text-shadow: none;
 }
 
+header small {
+  color: #8e8e8e;
+  text-shadow: none;
+}
+
 #menu {
   width: 100%;
   margin: 0 auto;

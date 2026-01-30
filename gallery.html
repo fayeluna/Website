@@ -8,8 +8,143 @@
     <title>----Luna's Corner of the Interwebs----</title>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="icon" href="image/Blahaj.png">
+    <script src="js/gallery.js"></script>
     <style type="text/css">
+        /* gallery.html */
 
+        #overview {
+            margin: 0 10px 10px 10px;
+        }
+
+        .logo {
+            display: block;
+            margin-bottom: 40px !important;
+            float: left;
+            margin: 11px;
+            width: 200px;
+            height: 220px;
+            position: relative;
+        }
+
+        .logo a {
+            border-bottom: none;
+        }
+
+        .logo img {
+            /* image has to be a square */
+            width: auto;
+            position: relative;
+            height: 200px;
+        }
+
+        z {
+            /* image hover*/
+        }
+
+        z span {
+            display: none;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            height: auto;
+            transition: .9s ease;
+        }
+
+        z:hover span {
+            /* hover text color*/
+            color: grey;
+            display: block;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            /* 3 images per row */
+            grid-gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .gallery3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            /* 3 images per row */
+            grid-gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .gallery3 img {
+            width: 100%;
+            border: 10px solid #fccef8;
+            background: #fff;
+            object-fit: cover;
+        }
+
+        .gallery3 img:hover {
+            /* (E) OPTIONAL ZOOM ON HOVER */
+            z-index: 9;
+            transform: scale(1.05);
+            transition: transform ease 0.5s;
+        }
+
+        .gallery3 img.full {
+            /* (F) FULLSCREEN MODE */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery3 img.full:hover {
+            z-index: 999;
+            transform: none;
+        }
+
+        .tables {
+            max-width: 33%;
+            width: 650px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border: 10px solid #fccef8;
+            background: #fff;
+            object-fit: cover;
+        }
+
+        .gallery img:hover {
+            /* (E) OPTIONAL ZOOM ON HOVER */
+            z-index: 9;
+            transform: scale(1.05);
+            transition: transform ease 0.5s;
+        }
+
+        .gallery img.full {
+            /* (F) FULLSCREEN MODE */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery img.full:hover {
+            z-index: 999;
+            transform: none;
+        }
     </style>
 </head>
 
@@ -24,19 +159,19 @@
                     <header>
                         <h1>
                             <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
-                            <a href="about.html">Luna's Corner</a>
+                            <a href="index.html">Luna's Corner</a>
                             <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
-                            <small> ←  Learn more about me lol</small>
                         </h1>
                     </header>
                     <div id="menu">
                         <nav>
                             <ul>
-                                <li class="box1"><a href="index.html">Home</a></li>
-                                <li class="box2"><a href="books.html">Books</a></li>
-                                <li class="box3"><a href="gallery.html">Gallery</a></li>
-                                <li class="box4"><a href="guestbook.html">Guestbook</a></li>
-                                <li class="box5"><a href="blog.html">Blog</a></li>
+                                <li class="main-nav"><a href="index.html">Home</a></li>
+                                <li class="gallery-nav"><a href="gallery.html">Gallery</a></li>
+                                <li class="books-nav"><a href="books.html">Books</a></li>
+                                <li class="movies-nav"><a href="movies.html">Movies</a> </li>
+                                <li class="guestbook-nav"><a href="guestbook.html">Guestbook</a></li>
+                                <li class="blog-nav"><a href="blog.html">Blog</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -44,17 +179,196 @@
                 <!-- ▲Menu▲ -->
                 <!-- ▼Main▼ -->
                 <div id="contents">
+
                     <ul class="tab2">
                         <li><a href="javascript:void(0)" class="tablinks active"
-                                onclick="openCity(event, &#39;guestbook&#39;)" id="defaultOpen">Guestbook</a></li>
+                                onclick="openCity(event, &#39;overview&#39;)" id="defaultOpen">Overview</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;dreams&#39;)">Dreams</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;cyano&#39;)">Passing of Time - Half Frame</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;comingout&#39;)">My Coming Out</a></li>
                     </ul>
 
-                    <div id="guestbook" class="tabcontent" style="display: block;">
+                    <div id="overview" class="tabcontent" style="display: block;">
+                        <h3>Image series</h3>
+
+                        <div class="text-left">
+                            Here you can see some of the projects I have done. If it's a common theme or just
+                            some image series that I am proud of.
+                            I study photography so most Photographs were made for a "school subject" in mind. So here
+                            you can see just my "best" or rather my
+                            most favourites work that I have created till today. A lot of these works or projects are
+                            deeply personal. So be warned.
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="javascript:void(0)" onclick="openCity(event, &#39;dreams&#39;)">
+                                    <img src="image/gallery/dream.jpg" />
+                                    <span><img src="image/nav/sticker-fire-sticker.gif" style="background: none"></span>
+                            </z>
+                            ★ Dream Sequenze -- Some disturbing images are here ★</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="javascript:void(0)" onclick="openCity(event, &#39;cyano&#39;)">
+                                    <img src="image/gallery/cyano.png" />
+                                    <span><img src="image/nav/sticker-fire-sticker.gif" style="background: none"></span>
+                            </z>
+                            ★ Passing of time - Half Frame ★</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="javascript:void(0)" onclick="openCity(event, &#39;comingout&#39;)">
+                                    <img src="image/gallery/coming-out.jpg" />
+                                    <span><img src="image/nav/sticker-fire-sticker.gif" style="background: none"></span>
+                            </z>
+                            ★ My Coming Out ★</a>
+                        </div>
+
+                        <div class="logo">
+                            <z><a href="cameras.html">
+                                    <img src="image/gallery/cameras combined.png" />
+                                    <span><img src="image/sidebar/catspin.gif" style="background: none"></span>
+                            </z>
+                            General Images</a>
+                        </div>
+                    </div>
+
+                    <div id="dreams" class="tabcontent" style="display: none;">
                         <div class="tabs">
-                            <h2>♥ Guestbook ♥</h2>
-                            <iframe id="guestbook" title="Atabook.org" width="100%" height="1000px"
-                                src="https://lunaowo.atabook.org/">
-                            </iframe>
+                            <h2>♥ Dream Series ♥</h2>
+                            <div class="text-left">
+                                So my therapist suggested I should draw or write down my dreams and then create a happy
+                                ending to them.
+                                I did usually draw them but I sometimes struggled with a "Happy Ending". Out of this
+                                reason this small "series" of images exists.
+                                I drew them all on my Ipad on a ProCreate app.
+                                <br />
+                                <b>WARNING: My drawings are pretty shit !!!</b>
+                                <br />
+                                That's all.
+                                <br />
+                                <br />
+                            </div>
+                            <br />
+                            <div class="gallery">
+                                <img src="image/gallery/dream/Dream 1.png" title="Dream 1" />
+                                <img src="image/gallery/dream/Dream 2.png" title="Dream 2" />
+                                <img src="image/gallery/dream/Dream 3.png" title="Dream 3" />
+                                <img src="image/gallery/dream/Dream 4.png" title="Dream 4" />
+                                <img src="image/gallery/dream/Dream 5.png" title="Dream 5" />
+                            </div>
+                            <br />
+                            <br />
+                            <div class="text-left">
+                                A lot of these drawings have some really disturbing underlying themes of self harm, rape
+                                or dysphoria.
+                                Sadly I struggle a lot with body issues and some others pretty heavy topics.
+                                <br />
+                                In the first two images, the text acts almost like a mantra, that gets repeats over and
+                                over in my brain.
+                                <br />
+                                What I think is also important to not that I don't have these dreams "daily".
+                                Or rather I usually have them once and then I have different variations of these images
+                                or themes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cyano" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>♥ Cyano ♥</h2>
+                            <div class="text-left">
+                                The photo series is entitled “Passing of Time – Half
+                                Frame” and is conceived as a visual narrative of
+                                inner and outer change.
+                                <br />
+                                The series consists of five motifs, each constructed as a “half
+                                frame”: the left half of the image shows a state of “before” –
+                                orderly, bright, open, friendly. The right half of the image
+                                contrasts this state with an “after” – characterized by disorder,
+                                darkness, withdrawal, and loss of control.
+                                The choice of cyanotype as the printing process reinforces
+                                this effect: the deep blue represents melancholy, distance,
+                                and the feeling of being “submerged” – but also calm, depth,
+                                isolation, and a hint of hope. The irregularities and
+                                unpredictability of the process reflect the fragility and
+                                individuality of each experience.
+                                The series thus tells not only the story of an apartment, but
+                                also that of a person in transition – from a functioning
+                                everyday life to a state of depression and isolation. The
+                                “half-frame” structure underscores the rupture that
+                                experiencing a mental crisis can cause in one's life.
+                                <br />
+                                That's all.
+                                <br />
+                                <br />
+                            </div>
+                            <br />
+                            <div class="gallery">
+                                <img src="image/gallery/cyano/GP3_Künstlerin_Faye Borer_Bild-1_Sofa.jpg"
+                                    title="Sofa" />
+                                <img src="image/gallery/cyano/GP3_Künstlerin_Faye Borer_Bild-2_Window.jpg"
+                                    title="Window" />
+                                <img src="image/gallery/cyano/GP3_Künstlerin_Faye Borer_Bild-3_Dining_Table.jpg"
+                                    title="Dining Table" />
+                                <img src="image/gallery/cyano/GP3_Künstlerin_Faye Borer_Bild-4_Meds.jpg" title="Meds">
+                                <img src="image/gallery/cyano/GP3_Künstlerin_Faye Borer_Bild-5_Outside_View.jpg"
+                                    title="Outsie View" />
+                            </div>
+                            <div class="text-center">
+                                <br />
+                                <br />
+                                Here are some behind the scenes of this project.
+                                <br />
+                                <br />
+                            </div>
+                            <div class="gallery3">
+                                <img src="image/gallery/cyano/behind the scenes/1.jpg" />
+                                <img src="image/gallery/cyano/behind the scenes/2.jpg" />
+                                <img src="image/gallery/cyano/behind the scenes/3.jpg" />
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="comingout" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>♥ My Coming out ♥</h2>
+                            <div class="text-left">
+                                In this project on “My Coming Out”, I present an intimate and powerful series of
+                                images documenting my personal journey of self-discovery and transformation.
+                                Through a skillful combination of analog and digital photography, I capture the
+                                complex emotions and experiences that come with coming out as a trans woman.
+
+                                In this series, I present a series of carefully composed images ranging from
+                                introspective self-portraits
+                                to symbolic representations. Each photo tells its own story and invites you to reflect
+                                on identity,
+                                acceptance and the courage to be authentic. At the same time, all the images together
+                                form a visual
+                                narrative that reflects the entire process of my transition as a trans woman. This
+                                overall composition
+                                allows the viewer to comprehend both the individual moments and the overarching journey
+                                of mine.
+                                This work is not only a personal statement, but also a universal message of hope and
+                                self-acceptance for all those on a similar journey.
+                                <br />
+                                <br />
+                            </div>
+                            <br />
+                            <div class="gallery">
+                                <img src="image/gallery/coming out/1 Double Exposure.jpg" title="Double Exposure" />
+                                <img src="image/gallery/coming out/2 Bathroom.jpg" title="Bathroom" />
+                                <img src="image/gallery/coming out/3 Contemplation.jpg" title="Contemplation" />
+                                <img src="image/gallery/coming out/4 Acceptance.jpg" title="Acceptance" />
+                                <img src="image/gallery/coming out/5 Genderneutral.jpg" title="Genderneutral" />
+                                <img src="image/gallery/coming out/6 Makeup Table.jpg" title="Makeup Table" />
+                                <img src="image/gallery/coming out/7 Nightdress.jpg" title="Nightdress" />
+                                <img src="image/gallery/coming out/8 Past Present Future.jpg" title="Past Present Future" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -63,7 +377,8 @@
                     <!--only up to 6 per carousel-->
                     <img src="image/buttons/autism.gif" alt="autism" />
                     <img src="image/buttons/transwave.gif" alt="transwave" />
-                    <a href="https://neocities.org/"><img src="image/buttons/delete_twitter.gif" alt="delete twitter" /></a>
+                    <a href="https://neocities.org/"><img src="image/buttons/delete_twitter.gif"
+                            alt="delete twitter" /></a>
                     <img src="image/buttons/thispuphunts.png" alt="pup" />
                     <img src="image/buttons/transrights.png" alt="trans rights" />
                     <a href="https://transring.neocities.org/"><img src="image/buttons/button.png" alt="button" /></a>
@@ -76,8 +391,8 @@
                     <img src="image/buttons/transgender.gif" alt="transgender" />
                     <img src="image/buttons/poweredbyautism.png" alt="poweredbyautism" />
                 </div>
+                <!-- ▲Main▲ -->
             </div>
-            <!-- ▲Main▲ -->
         </div>
         <!-- ▲Center▲ -->
         <!-- ▼Left Side▼ -->
@@ -87,14 +402,15 @@
                 <div class="block">
                     <img class="bg-none" src="image/sidebar/banner200.gif" width="50%" height="auto" alt="banner" />
                     <h3>Categories</h3>
-                    <h4><a href="overview.html">Overview</a></h4>
-                    <h4><a href="index.html">Home</a></h4>
-                    <h4><a href="about.html">About me (narcissist moment)</a></h4>
-                    <h4><a href="books.html">Books</a></h4>
-                    <h4><a href="gallery.html">Gallery</a></h4>
-                    <h4><a href="devices.html">Devices wowie</a></h4>
-                    <h4><a href="guestbook.html">Guestbook</a></h4>
-                    <h4><a href="blog.html">Blog (yippie yapping)</a></h4>
+                <h4><a href="overview.html">Overview</a></h4>
+                <h4><a href="index.html">Home</a></h4>
+                <h4><a href="about.html">About me (narcissist moment)</a></h4>
+                <h4><a href="books.html">Books</a></h4>
+                <h4><a href="movies.html">Movies</a></h4>
+                <h4><a href="gallery.html">Gallery</a></h4>
+                <h4><a href="devices.html">Devices wowie</a></h4>
+                <h4><a href="guestbook.html">Guestbook</a></h4>
+                <h4><a href="blog.html">Blog (yippie yapping)</a></h4>
                     <h3>Webrings</h3>
                     <script src="https://transring.neocities.org/ring.js" data-widget="cloud"></script>
                     <br />
@@ -105,7 +421,7 @@
                             src="https://neocreatives.neocities.org/onionring-widget.js"></script>
                     </div>
                     <h3>Nerd Stuff</h3>
-                   <b>Last Updated: 05/10/2025</b>
+                    <b>Last Updated: 05/10/2025</b>
                     <br />
                     <br />
                     <a href="https://neocities.org/site/luna-uwu">---> more info here</a>
@@ -136,7 +452,6 @@
     <script src="js/oneko.js"></script>
     <script src="js/tab.js"></script>
     <script src="js/neocities.js"></script>
-
 </body>
 
 </html>

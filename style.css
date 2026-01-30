@@ -529,53 +529,63 @@ hr {
 nav
 =================================== */
 
-.box1 {
+.main-nav {
   background: url(image/nav/Home.png)no-repeat;
   background-size: contain
 }
 
-.box1:hover {
+.main-nav:hover {
   background: url(image/nav/Home_hover.png)no-repeat;
   background-size: contain
 }
 
-.box2 {
+.books-nav {
   background: url(image/nav/book.png)no-repeat;
   background-size: contain
 }
 
-.box2:hover {
+.books-nav:hover {
   background: url(image/nav/book_hover.png)no-repeat;
   background-size: contain
 }
 
-.box3 {
+.gallery-nav {
   background: url(image/nav/Polaroid.png)no-repeat;
   background-size: contain
 }
 
-.box3:hover {
+.gallery-nav:hover {
   background: url(image/nav/Polaroid_hover.png)no-repeat;
   background-size: contain
 }
 
-.box4 {
+.guestbook-nav {
   background: url(image/nav/Guestbook.png)no-repeat;
   background-size: contain
 }
 
-.box4:hover {
+.guestbook-nav:hover {
   background: url(image/nav/Guestbook_hover.png)no-repeat;
   background-size: contain
 }
 
-.box5 {
+.blog-nav {
   background: url(image/nav/toilet_thoughts.png)no-repeat;
   background-size: contain
 }
 
-.box5:hover {
+.blog-nav:hover {
   background: url(image/nav/toilet_thoughts_open.png)no-repeat;
+  background-size: contain
+}
+
+.movies-nav {
+  background: url(image/nav/movie_closed.png)no-repeat;
+  background-size: contain
+}
+
+.movies-nav:hover {
+  background: url(image/nav/movie_open.png)no-repeat;
   background-size: contain
 }
 
@@ -679,28 +689,28 @@ switch at width of 768px
     line-height: inherit
   }
 
-  .box1 {
-    background: url(image/icon01.gif) no-repeat 50% 50%
+  .main-nav {
+    background: url(image/nav/Home.png) no-repeat 50% 50%
   }
 
-  .box2 {
-    background: url(image/icon02.gif) no-repeat 50% 50%
+  .gallery-nav {
+    background: url(image/nav/Polaroid.png) no-repeat 50% 50%
   }
 
-  .box3 {
-    background: url(image/icon03.gif) no-repeat 50% 50%
+  .books-nav {
+    background: url(image/nav/book.png) no-repeat 50% 50%
   }
 
-  .box4 {
-    background: url(image/icon04.gif) no-repeat 50% 50%
+  .movies-nav {
+    background: url(image/nav/movie_closed.png) no-repeat 50% 50%
   }
 
-  .box5 {
-    background: url(image/icon05.gif) no-repeat 50% 50%
+  .guestbook-nav {
+    background: url(image/nav/Guestbook.png) no-repeat 50% 50%
   }
 
-  .box6 {
-    background: url(image/icon06.gif) no-repeat 50% 50%
+  .blog-nav {
+    background: url(image/nav/toilet_thoughts.png) no-repeat 50% 50%
   }
 
   #right h3,

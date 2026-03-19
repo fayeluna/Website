@@ -3,7 +3,7 @@ Hiiii
 Made this little website for neocities. It's a very cool little project. And I am having very much fun with it.
 
 Check out the Page here
-https://luna-uwu.neocities.org/
+[Neko Web Site](https://luna-uwu.nekoweb.org/)
 
 Hiiiii :3
 

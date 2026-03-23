@@ -107,7 +107,7 @@ html {
 }
 
 body {
-  background-image: url("image/bg.jpg");
+  background-image: url("image/background.jpg");
   color: #fff;
   font-size: 1.3em;
   font-family: 'Segoe UI', '游ゴシック Medium', 'Yu Gothic Medium', '游ゴシック体', YuGothic, 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
@@ -120,19 +120,17 @@ body {
 /* ===================================
 links
 =================================== */
-a {
-  color: inherit
-}
+
 
 a:hover {
-  color: #f16b8e
+  color: #c76bf1
 }
+
 
 #contents a:not(.bg-none),
 .block a:not(.bg-none) {
-  color: #f16b8e;
+  color: #000000;
   border-bottom: 1px dashed #57450f;
-  display: inline-block;
   padding: .1em .3em;
   position: relative;
   transition: .6s;
@@ -140,7 +138,8 @@ a:hover {
 
 #contents a:not(.bg-none):hover,
 .block a:not(.bg-none):hover {
-  border-bottom: 1px dashed #f16b8e
+  border-bottom: 1px dashed #c76bf1;
+  color: #c76bf1
 }
 
 /* ===================================
@@ -176,15 +175,14 @@ fundementals
 }
 
 #left {
-  background: url(image/sidebar/back01.gif) #fff;
   float: left;
   margin-left: -100%;
   width: 17%;
-  height: 100em;
+  height: 110em;
 }
 
 #left-inner {
-  padding: 20px 10px 20px 10px;
+  padding: 10px;
 }
 
 .carousel {
@@ -208,6 +206,148 @@ fundementals
   100% {
     transform: translateX(-100%);
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*A vast majority of this styling comes from 98.css code, if you're making a full windows 98 theme, I suggest you use the stylesheet this is sourced from - https://jdan.github.io/98.css/ */
+
+.title-bar-controls button {
+border:none;
+border-radius:0;
+box-sizing:border-box;
+color:transparent;
+min-height:23px;
+min-width:75px;
+padding:0 12px;
+text-shadow:0 0 #222;
+}
+
+.title-bar-controls button {
+background:silver;
+box-shadow:inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+.title-bar-controls button:not(:disabled):active {
+box-shadow:inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+text-shadow:1px 1px #222;
+}
+
+@media (not(hover)){
+button:not(:disabled):hover {
+box-shadow:inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey}
+}
+
+.title-bar-controls button:focus {
+outline:1px dotted #000;
+outline-offset:-4px;
+}
+
+.title-bar-controls button::-moz-focus-inner { border:0 }
+    
+@font-face {
+font-family: "Pixelated MS Sans Serif";
+src: url("https://files.catbox.moe/1za99g.woff") format("woff");
+src: url("https://files.catbox.moe/8fwbkl.woff2") format("woff2");
+font-weight: normal;
+font-style: normal;
+}   
+
+.window, .title-bar {
+font-family: "Pixelated MS Sans Serif", Arial;
+-webkit-font-smoothing: none;
+font-size: 15px;
+}
+
+.window {
+box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px #808080, inset 2px 2px #ffffff;
+background: #c0c0c0;
+color:#000;
+padding: 3px;
+width:100%;
+}
+
+.title-bar {
+background:linear-gradient(90deg, purple, orchid, pink);
+padding: 3px 2px 3px 3px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.title-bar-text {
+font-weight: bold;
+color: white;
+letter-spacing: 0;
+margin-right: 24px;
+}
+
+.title-bar-controls {
+display: flex;
+}
+
+.title-bar-controls button {
+padding: 0;
+display: block;
+min-width: 16px;
+min-height: 14px;
+}
+
+.title-bar-controls button:active {
+padding: 0;
+}
+
+.title-bar-controls button:focus {
+outline: none;
+}
+
+.title-bar-controls button[aria-label=Minimize]{
+background-image:url("https://raw.githubusercontent.com/jdan/98.css/main/icon/minimize.svg");
+background-position:bottom 3px left 4px;
+background-repeat:no-repeat
+}
+
+.title-bar-controls button[aria-label=Maximize]{
+background-image:url("https://raw.githubusercontent.com/jdan/98.css/4a2282dd9170cabf730fb5803d1153d86b2e94e3/icon/maximize.svg");
+background-position:top 2px left 3px;
+background-repeat:no-repeat;
+}
+
+.title-bar-controls button[aria-label=Close]{
+background-image:url("https://raw.githubusercontent.com/jdan/98.css/main/icon/close.svg");
+background-position:top 3px left 4px;
+background-repeat:no-repeat;
+margin-left:2px;
+}
+
+.window-body {
+margin: 8px;
+}
+
+/* literally only part ive custom coded so it scrolls . i also like the effect the fieldset adds */
+.fieldset {
+border:1px gray solid;
+box-shadow: white 1px 1px 0px inset, white 1px 1px 0px, white 0px 1px 0px, white 1px 0px 0px;
+margin:0;
+padding:5px;
+overflow-y:auto; 
+height:80em;
 }
 
 /* ===================================
@@ -392,9 +532,6 @@ link to top of page, copyright notice and email-me button
 }
 
 .emailme {
-  position: fixed;
-  bottom: 10px;
-  left: 13px;
   background-image: url(image/sidebar/emailme.png);
   height: 80px;
   width: 100px;
@@ -403,7 +540,6 @@ link to top of page, copyright notice and email-me button
   background-color: #7da9f5;
   background-repeat: no-repeat;
   background-position: bottom center;
-  box-shadow: inset 0 0 10px 0 rgba(75, 94, 120, .8);
   overflow: hidden;
 }
 
@@ -412,8 +548,6 @@ link to top of page, copyright notice and email-me button
   font-weight: 700;
   font-style: italic;
   font-size: 18px;
-  margin: 0;
-  padding: 4px;
   box-sizing: border-box;
 }
 

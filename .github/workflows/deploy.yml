@@ -16,4 +16,4 @@ jobs:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-domain: 'luna-uwu.nekoweb.org'
           nekoweb-username: 'luna-uwu'
-          directory: '/home/nekoweb/nekoweb/sites/luna-uwu/'
+          directory: 'public'

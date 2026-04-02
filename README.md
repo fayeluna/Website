@@ -1,6 +1,6 @@
 Hiiii
 
-Made this little website for neocities. It's a very cool little project. And I am having very much fun with it.
+Made this little website for nekoweb. It's a very cool little project. And I am having very much fun with it.
 
 Check out the Page here
 [Neko Web Site](https://luna-uwu.nekoweb.org/)

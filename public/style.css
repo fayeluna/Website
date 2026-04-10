@@ -208,8 +208,9 @@ fundementals
   }
 }
 
-/*A vast majority of this styling comes from 98.css code, if you're making a full windows 98 theme, I suggest you use the stylesheet this is sourced from - https://jdan.github.io/98.css/ */
-
+/* ===================================
+sidebar win style
+=================================== */
 .title-bar-controls button {
 border:none;
 border-radius:0;
@@ -361,6 +362,7 @@ index
   margin: 0 10px 10px 10px;
   text-align: left;
 }
+
 
 /* ===================================
 menu

@@ -363,6 +363,10 @@ index
   text-align: left;
 }
 
+.columns2 {
+  columns: 2;
+}
+
 
 /* ===================================
 menu

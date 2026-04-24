@@ -410,7 +410,7 @@ nav li a {
 }
 
 .tabs h2 {
-  margin: 0;
+  margin: 0 0 0 5px;
 }
 
 /* ===================================
@@ -709,6 +709,60 @@ nav
 .movies-nav:hover {
   background: url(image/nav/movie_open.png)no-repeat;
   background-size: contain
+}
+
+/*====================================
+Sitemap.html
+==================================== */
+
+.boxins2 {
+  margin: 0 auto;
+  padding: 0px 5px 5px 5px;
+}
+
+/* treeview for sitemap */
+ul.tree-view {
+  display: block;
+  margin: 0;
+  padding: 6px 6px 16px 16px
+}
+
+ul.tree-view li {
+  list-style-type: none;
+  margin-top: 4px;
+  position: relative
+}
+
+ul.tree-view ul {
+  margin-top: 4px;
+  padding-left: 20px
+}
+
+ul.tree-view.has-connector ul {
+  position: relative
+}
+
+ul.tree-view.has-connector ul:before {
+  border-left: 1px solid #c76bf1;
+  content: "";
+  height: calc(100% - 8px);
+  left: 8px;
+  position: absolute;
+  top: 0
+}
+
+ul.tree-view.has-connector ul li:before {
+  border-bottom: 1px solid #c76bf1;
+  content: "";
+  position: absolute;
+  right: calc(100% + 2px);
+  top: 13px;
+  width: 10px
+}
+
+ul.tree-view.has-connector ul li:last-child {
+  position: relative;
+  bottom: 3px;
 }
 
 

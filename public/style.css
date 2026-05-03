@@ -196,16 +196,6 @@ fundementals
     height: 100%;
     width: auto;
     display: inline-block;
-    animation: scroll 20s linear infinite;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
 }
 
 /* ===================================

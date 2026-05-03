@@ -74,7 +74,7 @@
                                 </div>
                                 <br />
                                 <br />
-                                Do you want to say anything to me? --> <a href="about.html">Contact me here <-- </a>
+                                Do you want to say hello? --> <a href="about.html">Contact me here <-- </a>
                                 <br />
                                 <h3>Funny Images</h3>
                                 <div class="text-center">
@@ -165,6 +165,17 @@
                                 <br />
                                 <textarea readonly><a href="https://luna-uwu.nekoweb.org"><img src="https://luna-uwu.nekoweb.org/button-luna.png" alt="Luna's Button"/></a></textarea>
                                 <h3>Nerd Stuff</h3>
+                                <label for="pet-select">Choose your <b>CAT</b>panion:</label>
+                                <select id="pet-select">
+                                    <option value="">--Please choose a variation--</option>
+                                    <option value="original">original</option>
+                                    <option value="trans">trans</option>
+                                    <option value="black-red">anarchy</option>
+                                    <option value="orange">orange</option>
+                                    <option value="pink">pink</option>
+                                </select>
+                                <br />
+                                <br />
                                 Changelog Site <a href="changelog.html">!! HERE !!</a>
                                 <br />
                                 <br />
@@ -211,7 +222,25 @@
     <script src="https://apis.google.com/js/platform.js" async="defer"></script>
     <script src="js/oneko.js"></script>
     <script src="js/tab.js"></script>
-    <script src="js/neocities.js"></script>
+    <script>
+  function loadOneko(cat) {
+    document.getElementById("oneko")?.remove();
+    document.getElementById("oneko-script")?.remove();
+
+    const script = document.createElement("script");
+    script.id = "oneko-script";
+    script.src = "./js/oneko.js";
+    script.dataset.cat = cat || "original";
+    document.body.appendChild(script);
+  }
+
+  document.getElementById("pet-select").addEventListener("change", function () {
+    loadOneko(this.value);
+  });
+
+  // Set the starting cat
+  loadOneko("trans");
+</script>
 </body>
 
 </html>

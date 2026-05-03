@@ -32,7 +32,31 @@
 <body>
     <h1>Changelog</h1>
     <a style="color: red;" href="overview.html"><-- Here you can go back to the overview</a>
+    <br />
+    <label for="pet-select">Choose your <b>CAT</b>panion:</label>
+    <select id="pet-select">
+        <option value="">--Please choose a variation--</option>
+        <option value="original">original</option>
+        <option value="trans">trans</option>
+        <option value="black-red">anarchy</option>
+        <option value="orange">orange</option>
+        <option value="pink">pink</option>
+    </select>
 
+    <br />
+    <br />
+            <h2>2026/05/03</h2>
+            <a>Added the cat variations to my site you can also change the cat texture. I did this myself and the code is <a style="color: red;" href="https://github.com/fayeluna/oneko.js">here</a>.
+            <br />
+            You can test out the Dropdown above btw! all the different variants are pretty cool and I will add new ones in the future. I am already planning to add a gray cat aswell.
+            What I think could also be cool is to add a site and give each of the cats a background history and maybe an IRL equivalent to the pixel ones and have a little list of likes / dislikes (basically just lore about the cat).
+            <br />
+            Also I think I want to either change the location of the webrings or make a new site for them. Also I have to add more neighbours and more buttons in general to my site.
+            But yeah see ya soon!
+            <br />
+            <br />
+            ~ Luna
+            </a>
             <h2>2026/04/25</h2>
             <a>Added Sitemap <a style="color: red;" href="sitemap.html">here</a> and also added finally my Button to my site. Also added a banner and a few more images.
             <br />
@@ -114,4 +138,23 @@
 
 </body>
 <script src="js/oneko.js"></script>
+<script>
+  function loadOneko(cat) {
+    document.getElementById("oneko")?.remove();
+    document.getElementById("oneko-script")?.remove();
+
+    const script = document.createElement("script");
+    script.id = "oneko-script";
+    script.src = "./js/oneko.js";
+    script.dataset.cat = cat || "original";
+    document.body.appendChild(script);
+  }
+
+  document.getElementById("pet-select").addEventListener("change", function () {
+    loadOneko(this.value);
+  });
+
+  // Set the starting cat
+  loadOneko("trans");
+</script>
 </html>

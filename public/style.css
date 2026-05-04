@@ -171,8 +171,10 @@ fundementals
 #contents {
   text-align: left;
   overflow: hidden scroll;
+  scrollbar-width: none;
   height: 70em;
   background: #cbe8f0;
+  position: relative;
 }
 
 #left {
@@ -379,8 +381,8 @@ index
 .blahaj-img{
   position: absolute;
   line-height: 0;
-  right: 10%;
-  bottom: 10%;
+  right: 20px;
+  bottom: 0;
   pointer-events: none;
 }
 

@@ -369,8 +369,10 @@ index
   text-align: left;
 }
 
-.columns2 {
-  columns: 2;
+.index-main {
+  padding: 0px 15px 15px 15px;
+  text-align: left;
+  border: 3px solid #a93cff;
 }
 
 .blahaj-img{

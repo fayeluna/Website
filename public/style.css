@@ -101,13 +101,14 @@ Background, text and settings
 =================================== */
 
 html {
-  font-size: 62.5%;
+  font-size: 65%;
   height: 100%;
   cursor: url('image/fish.ico'), default;
 }
 
 body {
   background-image: url("image/background.jpg");
+  background-repeat: repeat;
   color: #fff;
   font-size: 1.4em;
   font-family: "Pixelated MS Sans Serif";
@@ -178,7 +179,7 @@ fundementals
   float: left;
   margin-left: -100%;
   width: 17%;
-  height: 110em;
+  height: 100%;
 }
 
 #left-inner {
@@ -379,7 +380,7 @@ index
   position: absolute;
   line-height: 0;
   right: 10%;
-  bottom: 11%;
+  bottom: 10%;
   pointer-events: none;
 }
 
@@ -516,24 +517,6 @@ ul.tab2 li a:focus,
 /* ===================================
 link to top of page, copyright notice and email-me button
 =================================== */
-
-#pagetop {
-  background: rgba(238, 136, 134, .8);
-  /* 背景 */
-  color: #fff;
-  /* 色 */
-  border-radius: 5px;
-  display: block;
-  padding: 10px;
-  position: fixed;
-  text-align: center;
-  bottom: -80px;
-  z-index: 10
-}
-
-#pagetop:hover {
-  background: rgba(238, 136, 134, .5)
-}
 
 #fl a {
   position: fixed;

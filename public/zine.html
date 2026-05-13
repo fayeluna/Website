@@ -9,6 +9,145 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="icon" href="image/Blahaj.png">
     <link rel="stylesheet" href="https://webring.nekoweb.org/onionring.css">
+    <script src="js/gallery.js"></script>
+    <style type="text/css">
+        /* gallery.html */
+
+        #overview {
+            margin: 0 10px 10px 10px;
+        }
+
+        .logo {
+            display: block;
+            margin-bottom: 40px !important;
+            float: left;
+            margin: 11px;
+            width: 200px;
+            height: 220px;
+            position: relative;
+        }
+
+        .logo a {
+            border-bottom: none;
+        }
+
+        .logo img {
+            /* image has to be a square */
+            width: auto;
+            position: relative;
+            height: 200px;
+            image-rendering: pixelated;
+        }
+
+        z {
+            /* image hover*/
+        }
+
+        z span {
+            display: none;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            height: auto;
+            transition: .9s ease;
+        }
+
+        z:hover span {
+            /* hover text color*/
+            color: grey;
+            display: block;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            /* 3 images per row */
+            grid-gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .gallery3 {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            /* 3 images per row */
+            grid-gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .gallery3 img {
+            width: 100%;
+            border: 10px solid #fccef8;
+            background: #fff;
+            object-fit: cover;
+        }
+
+        .gallery3 img:hover {
+            /* (E) OPTIONAL ZOOM ON HOVER */
+            z-index: 9;
+            transform: scale(1.05);
+            transition: transform ease 0.5s;
+        }
+
+        .gallery3 img.full {
+            /* (F) FULLSCREEN MODE */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery3 img.full:hover {
+            z-index: 999;
+            transform: none;
+        }
+
+        .tables {
+            max-width: 33%;
+            width: 650px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border: 10px solid #fccef8;
+            background: #fff;
+            object-fit: cover;
+        }
+
+        .gallery img:hover {
+            /* (E) OPTIONAL ZOOM ON HOVER */
+            z-index: 9;
+            transform: scale(1.05);
+            transition: transform ease 0.5s;
+        }
+
+        .gallery img.full {
+            /* (F) FULLSCREEN MODE */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            width: 100vw;
+            height: 100vh;
+            object-fit: contain;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery img.full:hover {
+            z-index: 999;
+            transform: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,7 +163,7 @@
                             <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
                             <a href="about.html">Luna's Corner</a>
                             <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
-                            <small> ← Learn more about me lol</small>
+                            <small> ←  Learn more about me lol</small>
                         </h1>
                     </header>
                     <div id="menu">
@@ -43,85 +182,51 @@
                 <!-- ▲Menu▲ -->
                 <!-- ▼Main▼ -->
                 <div id="contents">
-                    <div class="blahaj-img">
-                        <img src="image/content/Blahaj.png">
-                    </div>
-                    
 
                     <ul class="tab2">
                         <li><a href="javascript:void(0)" class="tablinks active"
-                                onclick="openCity(event, &#39;home&#39;)" id="defaultOpen">Home</a></li>
+                                onclick="openCity(event, &#39;overview&#39;)" id="defaultOpen">Overview</a></li>
+                        <li><a href="javascript:void(0)" class="tablinks"
+                                onclick="openCity(event, &#39;zine1&#39;)">Twig</a></li>
                     </ul>
 
-                    <div id="home" class="tabcontent" style="display: block;">
+                    <div id="overview" class="tabcontent" style="display: block;">
                         <div class="tabs">
-                            <h2>Welcome to my humble abode <small>best viewed on PC</small></h2>
-                            <br />
+                            <h2>Zines</h2>
                             <div class="text-left">
-                                <div class="index-main">
-                                    <br />
-                                    <b>Hello !</b>
-                                    <br />
-                                    Welcome. I am <b>Luna (They / It )</b>
-                                    <br />
-                                    <br />
-                                    This site is for expressing myself and just showing different
-                                    stuff that I'm currently working on. It is kind of my virtual home and my place to just be myself without any limitations.
-                                    I really like making art. One day that might be Cyanotypes or just drawing on my Ipad or I'll be shooting on an analog camera.
-                                    I really like photography especially the analog photography.
-                                    <br />
-                                    <br />
-                                    The mechanical aspect of the different cameras I have. The slow and and intentional process behind each picture.
-                                    That you can control every aspect of the whole process. You can decide what type of film. Then you can decide how you expose it. Do you want to push or pull this specific film.
-                                    What kind of Camera / Lens do I want to use? Then how do I want to develop it? How do you scan / print them.
-                                    <br />
-                                    For each process you can decide what you want and decide the outcome. This is why I like photography so much.
-                                    <br />
-                                    <br />
-                                    If you want to learn more about me check the <a href="about.html">About-me</a> Page. Do you want to say hello? --> <a href="about.html">Contact me here <-- </a>
-                                    <br />
-                                    <br />
-                                </div>
-                                <br />
-                                <br />
-                                <div class="index-row">
-                                    <div class="index-object">
-                                        <h3>Likes:</h3>
-                                        <ul>
-                                            <li><a href="cameras.html">Photography</a> !! wowie images and stuff !!</li>
-                                            <li><a href="gallery.html">Drawing / Sketching digital art stuff</a> <small>i suck</small></li>
-                                            <li><a href="books.html">Reading and books</a> <small>i'm a slow reader</small></li>
-                                            <li><a href="blog.html">Writing I guess</a> <br /></li>
-                                            <li><a href="zine.html">Zines</a><small>I uploaded my first one yay</small></li>
-                                            <li>Music (I would really try to make my own song soon!!!)</li>
-                                            <li>Sewing <small>maybe coming soon...</small></li>
-                                            <li>Lino Prints <small>THEY ARE SO SO SO SO COOL</small></li>
-                                            <li>Painting :3 <small>I really wanne try oil paint</small></li>
-                                        </ul>
-                                    </div>
-                                    <div class="index-object">
-                                        <h3>Webrings</h3>
-                                        <link rel="stylesheet" type="text/css" href="https://webring.crislzy.xyz/styles/example.css">
-                                        <div class="widget">
-                                            <a href="https://webring.crislzy.xyz/webring.html?name=luna&to=prev">Prev</a>
-                                            <a href="https://webring.crislzy.xyz">MeowRing</a>
-                                            <a href="https://webring.crislzy.xyz/webring.html?name=luna&to=next">Next</a>
-                                        </div>
-                                        <br />
-                                        <br />
-                                        <div id="sapphicring3">
-                                            <a href="https://sunnishinez.neocities.org/webring/sapphicring"><img src="https://sunnishinez.neocities.org/webring/sapphic/sappho.png" /></a><br />
-                                            <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=previous"><img src="https://sunnishinez.neocities.org/webring/sapphic/s_arright.png" /></a>
-                                            <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=random">random</a>
-                                            <a href="https://sunnishinez.neocities.org/webring/sapphicring?action=next"><img src="https://sunnishinez.neocities.org/webring/sapphic/s_arleft.png" /></a>
-                                        </div>
-                                        <div id='nekowebring'>
-                                            <script type="text/javascript" src="https://webring.nekoweb.org/onionring-variables.js"></script>
-                                            <script type="text/javascript" src="https://webring.nekoweb.org/onionring-widget.js"></script>
-                                        </div>
-                                    </div>
-                                </div>
+                                Here you can see some of the Zines I have created.
                             </div>
+
+                            <div class="logo">
+                                <z><a href="javascript:void(0)" onclick="openCity(event, &#39;zine1&#39;)">
+                                        <img src="image/zine/twigzine cover.jpg" />
+                                        <span><img src="image/nav/sticker-fire-sticker.gif" style="background: none"></span>
+                                </z>
+                                ★ Twig Zine 2026 ★</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="zine1" class="tabcontent" style="display: none;">
+                        <div class="tabs">
+                            <h2>♥ Twig Zine ♥</h2>
+                            <div class="text-left">
+                                
+                                This zine explores the different variant and forms of trees, branches, foliage or twigs. It contrasts negative and positive images side by side. <br />
+                                The images were created with a trusty Leica R3. It was developed in a cooperation with Minolta and is basically a Minolta XE Body with Leica Lenses.
+
+                            </div>
+
+                            <div class="text-center">
+
+                            <iframe
+                                height= "1000"
+                                width="1000"
+                                src="iframe/twigzine/twigzine.html">
+                            </iframe>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -196,7 +301,6 @@
                                 Copy my button and add it to your site:
                                 <br />
                                 <textarea readonly><a href="https://luna-uwu.nekoweb.org"><img src="https://luna-uwu.nekoweb.org/button-luna.png" alt="Luna's Button"/></a></textarea>
-                                <br />
                                 <h3>Nerd Stuff</h3>
                                 <label for="pet-select">Choose your <b>CAT</b>panion:</label>
                                 <br />
@@ -218,7 +322,7 @@
                                         <p class="id-1">Email</p>
                                         <p class="id-2">Me</p>
                                     </a>
-                                </div> 
+                                </div>   
                             </div>
                             <!-- ▲Left Side Content▲ -->
                         </div>
@@ -231,11 +335,12 @@
     <!-- ▲Overall Enclosure▲ -->
 
     <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/jquery.scroll.js"></script>
     <script src="js/oneko.js"></script>
     <script src="js/tab.js"></script>
+    <script src="js/gallery.js"></script>
 
-
-    <!-- Cat stuff -->
     <script>
   function loadOneko(cat) {
     document.getElementById("oneko")?.remove();
@@ -253,7 +358,7 @@
   });
 
   // Set the starting cat
-  loadOneko("black-red");
+  loadOneko("pink");
 </script>
 </body>
 

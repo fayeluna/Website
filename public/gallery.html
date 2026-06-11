@@ -147,6 +147,68 @@
             z-index: 999;
             transform: none;
         }
+
+        /* Censor Stuff Section*/
+
+        .wrap-collabsible {
+            margin-bottom: 1.2rem 0;
+        }
+
+        input[type='checkbox'] {
+            display: none;
+        }
+
+        .lbl-toggle {
+            display: block;
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 7px;
+            transition: all 0.25s ease-out;
+        }
+
+        .lbl-toggle:hover {
+            color: #8710ac;
+        }
+
+        .lbl-toggle::before {
+            content: ' ';
+
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-left: 5px solid currentColor;
+            vertical-align: middle;
+            margin-right: .7rem;
+            transform: translateY(-2px);
+
+            transition: transform .2s ease-out;
+        }
+
+        .toggle:checked+.lbl-toggle::before {
+            transform: rotate(90deg) translateX(-3px);
+        }
+
+        .collapsible-content {
+            max-height: 0px;
+            overflow: hidden;
+            transition: max-height .25s ease-in-out;
+        }
+
+        .toggle:checked+.lbl-toggle+.collapsible-content {
+            max-height: 130vh;
+        }
+
+        .toggle:checked+.lbl-toggle {
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .collapsible-content .content-inner {
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            padding: .5rem 1rem;
+            height: auto;
+        }
+
     </style>
 </head>
 
@@ -163,7 +225,7 @@
                             <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
                             <a href="about.html">Luna's Corner</a>
                             <img src="image/nav/sticker-fire-sticker.gif" height="30px" alt="Fire" />
-                            <small> ←  Learn more about me lol</small>
+                            <small> ← Learn more about me lol</small>
                         </h1>
                     </header>
                     <div id="menu">
@@ -200,16 +262,19 @@
                             <div class="text-left">
                                 Here you can see some of the projects I have done. If it's a common theme or just
                                 some image series that I am proud of.
-                                I study photography so most Photographs were made for a "school subject" in mind. So here
+                                I study photography so most Photographs were made for a "school subject" in mind. So
+                                here
                                 you can see just my "best" or rather my
-                                most favourites work that I have created till today. A lot of these works or projects are
+                                most favourites work that I have created till today. A lot of these works or projects
+                                are
                                 deeply personal. So be warned.
                             </div>
 
                             <div class="logo">
                                 <z><a href="javascript:void(0)" onclick="openCity(event, &#39;dreams&#39;)">
                                         <img src="image/gallery/dream.jpg" />
-                                        <span><img src="image/nav/sticker-fire-sticker.gif" style="background: none"></span>
+                                        <span><img src="image/nav/sticker-fire-sticker.gif"
+                                                style="background: none"></span>
                                 </z>
                                 ★ Dream Sequenze -- Some disturbing images are here ★</a>
                             </div>
@@ -217,7 +282,8 @@
                             <div class="logo">
                                 <z><a href="javascript:void(0)" onclick="openCity(event, &#39;cyano&#39;)">
                                         <img src="image/gallery/cyano.png" />
-                                        <span><img src="image/nav/sticker-fire-sticker.gif" style="background: none"></span>
+                                        <span><img src="image/nav/sticker-fire-sticker.gif"
+                                                style="background: none"></span>
                                 </z>
                                 ★ Passing of time - Half Frame ★</a>
                             </div>
@@ -225,7 +291,8 @@
                             <div class="logo">
                                 <z><a href="javascript:void(0)" onclick="openCity(event, &#39;comingout&#39;)">
                                         <img src="image/gallery/coming-out.jpg" />
-                                        <span><img src="image/nav/sticker-fire-sticker.gif" style="background: none"></span>
+                                        <span><img src="image/nav/sticker-fire-sticker.gif"
+                                                style="background: none"></span>
                                 </z>
                                 ★ My Coming Out ★</a>
                             </div>
@@ -255,17 +322,26 @@
                                 That's all.
                                 <br />
                                 <br />
+                                <h3>Warning about the images may include themes of [RAPE / SELF HARM / GORE / DEATH]</h3>
+                                
                             </div>
-                            <br />
-                            <div class="gallery">
-                                <img src="image/gallery/dream/Dream 1.png" title="Dream 1" />
-                                <img src="image/gallery/dream/Dream 2.png" title="Dream 2" />
-                                <img src="image/gallery/dream/Dream 3.png" title="Dream 3" />
-                                <img src="image/gallery/dream/Dream 4.png" title="Dream 4" />
-                                <img src="image/gallery/dream/Dream 5.png" title="Dream 5" />
+                            <div class="wrap-collabsible">
+                                <input id="collapsible" class="toggle" type="checkbox">
+                                <label for="collapsible" class="lbl-toggle">Show Images</label>
+                                <div class="collapsible-content">
+                                    <div class="content-inner">
+
+                                        <div class="gallery">
+                                            <img src="image/gallery/dream/Dream 1.png" title="Dream 1" />
+                                            <img src="image/gallery/dream/Dream 2.png" title="Dream 2" />
+                                            <img src="image/gallery/dream/Dream 3.png" title="Dream 3" />
+                                            <img src="image/gallery/dream/Dream 4.png" title="Dream 4" />
+                                            <img src="image/gallery/dream/Dream 5.png" title="Dream 5" />
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
-                            <br />
-                            <br />
                             <div class="text-left">
                                 A lot of these drawings have some really disturbing underlying themes of self harm, rape
                                 or dysphoria.
@@ -371,7 +447,8 @@
                                 <img src="image/gallery/coming out/5 Genderneutral.jpg" title="Genderneutral" />
                                 <img src="image/gallery/coming out/6 Makeup Table.jpg" title="Makeup Table" />
                                 <img src="image/gallery/coming out/7 Nightdress.jpg" title="Nightdress" />
-                                <img src="image/gallery/coming out/8 Past Present Future.jpg" title="Past Present Future" />
+                                <img src="image/gallery/coming out/8 Past Present Future.jpg"
+                                    title="Past Present Future" />
                             </div>
                         </div>
                     </div>
@@ -394,7 +471,8 @@
                     <img src="image/buttons/triplebaka.gif" alt="triplebaka" />
                     <img src="image/buttons/transgender.gif" alt="transgender" />
                     <img src="image/buttons/poweredbyautism.png" alt="poweredbyautism" />
-                    <a href="https://luna-uwu.nekoweb.org"><img src="https://luna-uwu.nekoweb.org/button-luna.png" alt="Luna's Button"/></a>
+                    <a href="https://luna-uwu.nekoweb.org"><img src="https://luna-uwu.nekoweb.org/button-luna.png"
+                            alt="Luna's Button" /></a>
                 </div>
                 <div class="carousel">
                     <!--only up to 6 per carousel-->
@@ -442,20 +520,25 @@
                                 <h4><a href="blog.html">Blog (yippie yapping)</a></h4>
                                 <h4><a href="sitemap.html">Sitemap</a></h4>
                                 <h3>Neighbours</h3>
-                                <a href="https://chaothief.nekoweb.org/"><img src="https://chaothief.nekoweb.org/Assets/websiteButtonv1.gif"></a>
+                                <a href="https://chaothief.nekoweb.org/"><img
+                                        src="https://chaothief.nekoweb.org/Assets/websiteButtonv1.gif"></a>
                                 <br />
-                                <a href="https://plots.club"><img src="https://my.plots.club/public/plots_88x31.png"> </a>
+                                <a href="https://plots.club"><img src="https://my.plots.club/public/plots_88x31.png">
+                                </a>
                                 <br />
-                                <a href="https://inward.garden"><img src="https://inward.garden/img/inward_88x31.png"> </a>
+                                <a href="https://inward.garden"><img src="https://inward.garden/img/inward_88x31.png">
+                                </a>
                                 <br />
-                                <a href="https://stackofgoats.studio"><img src="https://stackofgoats.studio/88x31.png"> </a>
+                                <a href="https://stackofgoats.studio"><img src="https://stackofgoats.studio/88x31.png">
+                                </a>
                                 <br />
                                 <h3>Button</h3>
                                 <img src="button-luna-export.png" width="180em" height="auto" alt="Button">
                                 <br />
                                 Copy my button and add it to your site:
                                 <br />
-                                <textarea readonly><a href="https://luna-uwu.nekoweb.org"><img src="https://luna-uwu.nekoweb.org/button-luna.png" alt="Luna's Button"/></a></textarea>
+                                <textarea
+                                    readonly><a href="https://luna-uwu.nekoweb.org"><img src="https://luna-uwu.nekoweb.org/button-luna.png" alt="Luna's Button"/></a></textarea>
                                 <h3>Nerd Stuff</h3>
                                 <label for="pet-select">Choose your <b>CAT</b>panion:</label>
                                 <br />
@@ -477,7 +560,7 @@
                                         <p class="id-1">Email</p>
                                         <p class="id-2">Me</p>
                                     </a>
-                                </div>   
+                                </div>
                             </div>
                             <!-- ▲Left Side Content▲ -->
                         </div>
@@ -497,24 +580,24 @@
     <script src="js/gallery.js"></script>
 
     <script>
-  function loadOneko(cat) {
-    document.getElementById("oneko")?.remove();
-    document.getElementById("oneko-script")?.remove();
+        function loadOneko(cat) {
+            document.getElementById("oneko")?.remove();
+            document.getElementById("oneko-script")?.remove();
 
-    const script = document.createElement("script");
-    script.id = "oneko-script";
-    script.src = "./js/oneko.js";
-    script.dataset.cat = cat || "original";
-    document.body.appendChild(script);
-  }
+            const script = document.createElement("script");
+            script.id = "oneko-script";
+            script.src = "./js/oneko.js";
+            script.dataset.cat = cat || "original";
+            document.body.appendChild(script);
+        }
 
-  document.getElementById("pet-select").addEventListener("change", function () {
-    loadOneko(this.value);
-  });
+        document.getElementById("pet-select").addEventListener("change", function () {
+            loadOneko(this.value);
+        });
 
-  // Set the starting cat
-  loadOneko("pink");
-</script>
+        // Set the starting cat
+        loadOneko("pink");
+    </script>
 </body>
 
 </html>

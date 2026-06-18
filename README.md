@@ -7,6 +7,12 @@ Check out the Page here
 
 Hiiiii :3
 
+Things I despise about my site:
+-----------------------
+- No landing page
+- every page same layout and design
+- not enough dark (looks too happy)
+
 
 To-do list
 -----------------------

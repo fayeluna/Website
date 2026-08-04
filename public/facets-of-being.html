@@ -1513,6 +1513,13 @@
         // Set the starting cat
         loadOneko("trans");
     </script>
+
+    <script>
+        addEventListener('load',()=>{let t=new URL(location).searchParams.get('tab');if(t)openCity({preventDefault(){}},t)});
+    </script>
+    <!--
+    after the .html?tab=VALUE
+    -->
 </body>
 
 </html>

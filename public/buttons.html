@@ -9,144 +9,8 @@
     <link rel="stylesheet" href="style.css" type="text/css" />
     <link rel="icon" href="image/Blahaj.png">
     <link rel="stylesheet" href="https://webring.nekoweb.org/onionring.css">
-    <script src="js/gallery.js"></script>
     <style type="text/css">
-        /* gallery.html */
-
-        #overview {
-            margin: 0 10px 10px 10px;
-        }
-
-        .logo {
-            display: block;
-            margin-bottom: 40px !important;
-            float: left;
-            margin: 11px;
-            width: 200px;
-            height: 220px;
-            position: relative;
-        }
-
-        .logo a {
-            border-bottom: none;
-        }
-
-        .logo img {
-            /* image has to be a square */
-            width: auto;
-            position: relative;
-            height: 200px;
-            image-rendering: pixelated;
-        }
-
-        z {
-            /* image hover*/
-        }
-
-        z span {
-            display: none;
-            margin: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            height: auto;
-            transition: .9s ease;
-        }
-
-        z:hover span {
-            /* hover text color*/
-            color: grey;
-            display: block;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            /* 3 images per row */
-            grid-gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .gallery3 {
-            display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-            /* 3 images per row */
-            grid-gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .gallery3 img {
-            width: 100%;
-            border: 10px solid #fccef8;
-            background: #fff;
-            object-fit: cover;
-        }
-
-        .gallery3 img:hover {
-            /* (E) OPTIONAL ZOOM ON HOVER */
-            z-index: 9;
-            transform: scale(1.05);
-            transition: transform ease 0.5s;
-        }
-
-        .gallery3 img.full {
-            /* (F) FULLSCREEN MODE */
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            width: 100vw;
-            height: 100vh;
-            object-fit: contain;
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        .gallery3 img.full:hover {
-            z-index: 999;
-            transform: none;
-        }
-
-        .tables {
-            max-width: 33%;
-            width: 650px;
-        }
-
-        .gallery img {
-            width: 100%;
-            border: 10px solid #fccef8;
-            background: #fff;
-            object-fit: cover;
-        }
-
-        .gallery img:hover {
-            /* (E) OPTIONAL ZOOM ON HOVER */
-            z-index: 9;
-            transform: scale(1.05);
-            transition: transform ease 0.5s;
-        }
-
-        .gallery img.full {
-            /* (F) FULLSCREEN MODE */
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            width: 100vw;
-            height: 100vh;
-            object-fit: contain;
-            background: rgba(0, 0, 0, 0.7);
-        }
-
-        .gallery img.full:hover {
-            z-index: 999;
-            transform: none;
-        }
+        /* movies.html */
     </style>
 </head>
 
@@ -185,81 +49,33 @@
 
                     <ul class="tab2">
                         <li><a href="javascript:void(0)" class="tablinks active"
-                                onclick="openCity(event, &#39;overview&#39;)" id="defaultOpen">Overview</a></li>
-                        <li><a href="javascript:void(0)" class="tablinks"
-                                onclick="openCity(event, &#39;zine1&#39;)">Twig</a></li>
-                        <li><a href="javascript:void(0)" class="tablinks"
-                                onclick="openCity(event, &#39;zine2&#39;)">Coming out</a></li>
+                                onclick="openCity(event, &#39;overview&#39;)" id="defaultOpen">Button</a></li>
                     </ul>
 
                     <div id="overview" class="tabcontent" style="display: block;">
                         <div class="tabs">
-                            <h2>Zines</h2>
+                            <h2>Frenns :333333</h2>
                             <div class="text-left">
-                                Here you can see some of the Zines I have created.
-                            </div>
+                                <br />
+                                <a href="https://chaothief.nekoweb.org/"><img src="https://chaothief.nekoweb.org/Assets/websiteButtonv1.gif"></a>
+                                <a href="https://plots.club"><img src="https://my.plots.club/public/plots_88x31.png"> </a>
+                                <a href="https://inward.garden"><img src="https://inward.garden/img/inward_88x31.png"> </a>
+                                <a href="https://stackofgoats.studio"><img src="https://stackofgoats.studio/88x31.png"> </a>
+                                <a href="https://inulex.nekoweb.org/"><img src="https://inulex.nekoweb.org/images/sitebutton1.png"></a>
 
-                            <div class="logo">
-                                <z><a href="javascript:void(0)" onclick="openCity(event, &#39;zine1&#39;)">
-                                        <img src="image/zine/twigzine cover.jpg" />
-                                        <span><img src="image/nav/sticker-fire-sticker.gif" style="background: none"></span>
-                                </z>
-                                ★ Twig Zine 2026 ★</a>
+                                <div class="text-center">
+                                    
                             </div>
-
-                            <div class="logo">
-                                <z><a href="javascript:void(0)" onclick="openCity(event, &#39;zine2&#39;)">
-                                        <img src="image/zine/coming out cover.jpg" />
-                                        <span><img src="image/nav/sticker-fire-sticker.gif" style="background: none"></span>
-                                </z>
-                                ★ Coming Out 2025 ★</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="zine1" class="tabcontent" style="display: none;">
-                        <div class="tabs">
-                            <h2>♥ Twig Zine ♥</h2>
+                            <h2>Cool Sites</h2>
                             <div class="text-left">
-                                This zine explores the different variant and forms of trees, branches, foliage or twigs. It contrasts negative and positive images side by side. <br />
-                                The images were created with a trusty Leica R3. It was developed in a cooperation with Minolta and is basically a Minolta XE Body with Leica Lenses.
-                            </div>
-                            <div class="text-center">
-                            <iframe
-                                height= "600"
-                                width="800"
-                                src="iframe/twigzine/twigzine.html">
-                            </iframe>
-                            <br />
-                            <a href="iframe/twigzine/twigzine.html" target="_blank">Fullscreen</a> 
-                            <br />
-                            <small>(will open in new tab)</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="zine2" class="tabcontent" style="display: none;">
-                        <div class="tabs">
-                            <h2>♥ Coming Out Zine ♥</h2>
-                            <div class="text-left">
-                                This was my Coming out project and the actual booklet that I sent my parents + with some letters. <br />
-                                The letters are not included since they are in german and also maybe a bit too personal :> <br />
-                                I was planning this project for about a year maybe even more. It was mostly shot on film and it was such a rewarding project.
-                            </div>
-                            <div class="text-center">
-                            <iframe
-                                height= "600"
-                                width="800"
-                                src="iframe/coming out/coming out.html">
-                            </iframe>
-                            <br />
-                            <a href="iframe/coming out/coming out.html" target="_blank">Fullscreen</a>
-                            <br />
-                            <small>(will open in new tab)</small>
+                                <br />
+                                <a href="https://ofeliafirelight.neocities.org/"><img src="https://ofeliafirelight.neocities.org/pictures/Buttons/dnest.png"></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br />
+            </div>
+            <br />
                 <div class="carousel">
                     <!--only up to 6 per carousel-->
                     <img src="image/buttons/autism.gif" alt="autism" />
@@ -362,7 +178,7 @@
                                         <p class="id-1">Email</p>
                                         <p class="id-2">Me</p>
                                     </a>
-                                </div>   
+                                </div>
                             </div>
                             <!-- ▲Left Side Content▲ -->
                         </div>
@@ -375,12 +191,8 @@
     <!-- ▲Overall Enclosure▲ -->
 
     <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="js/jquery.scroll.js"></script>
     <script src="js/oneko.js"></script>
     <script src="js/tab.js"></script>
-    <script src="js/gallery.js"></script>
-
     <script>
   function loadOneko(cat) {
     document.getElementById("oneko")?.remove();
@@ -398,7 +210,7 @@
   });
 
   // Set the starting cat
-  loadOneko("pink");
+  loadOneko("black-red");
 </script>
 </body>
 
